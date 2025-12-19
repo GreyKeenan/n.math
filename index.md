@@ -8,6 +8,7 @@ For reference only; explanations excluded.
 
 * [geometry](cheatsheets/geometry)
 * [trigonometry](cheatsheets/trigonometry)
+* [limits](cheatsheets/limits)
 * [differentiation](cheatsheets/derivatives)
 * [integration](cheatsheets/integration)
 
