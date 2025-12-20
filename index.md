@@ -7,6 +7,7 @@ Lists of common formulas or relationships.
 For reference only; explanations excluded.
 
 * [geometry](cheatsheets/geometry)
+* [powers](cheatsheets/powers)
 * [trigonometry](cheatsheets/trigonometry)
 * [limits](cheatsheets/limits)
 * [differentiation](cheatsheets/differentiation)
@@ -15,10 +16,10 @@ For reference only; explanations excluded.
 
 ### Major Categories
 
-* [geometry](geometry)
-* [statistics](statistics)
-* [trigonometry](trigonometry)
-* [calculus](calculus)
+* [geometry](geometry/index)
+* [statistics](statistics/index)
+* [trigonometry](trigonometry/index)
+* [calculus](calculus/index)
 
 
 ### Miscellaneous Notes
