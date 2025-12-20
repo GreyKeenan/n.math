@@ -1,4 +1,4 @@
-Grey Keenan's Math Notes: Index
+Grey's Math Notes: Index
 ========================================
 
 ### Cheatsheets

@@ -4,12 +4,12 @@ Trigonometry Cheat-Sheet
 <br>
 
 <!-- INDEX -->
-* Definitions
-* Special Values
-* Essential Identities & Relationships
-* Laws
-* Calculus
-* Hyperbolic Trig
+* [Definitions](#definitions)
+* [Special Values](#special-values)
+* [Essential Identities](#essential-identities)
+* [Laws](#laws)
+* [Calculus](#calculus)
+* [Hyperbolic Trig](#hyperbolic-trig)
 
 <br>
 
