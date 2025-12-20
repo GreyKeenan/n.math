@@ -50,10 +50,13 @@ Refactor trigonometric equations into a form
 where substitution can be used on them to solve the integral.
 
 	TODO
+	sin/cos strat
+	tan/sec (or cot/csc) strat
 
 
 Trigonometric Substitution
 ----------------------------------------
 
-	TODO
+	Sroot(bb - xx)dx   try   x = bsint
+	Sroot(bb + xx)dx   try   x = btant
 
