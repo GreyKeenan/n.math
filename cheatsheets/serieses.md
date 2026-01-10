@@ -18,9 +18,6 @@ Serieses Cheat-Sheet
 
 <br>
 
-	let Z be capital sigma
-	let a_n, b_n be some sequences
-
 
 Named Serieses
 ----------------------------------------
@@ -28,7 +25,7 @@ Named Serieses
 Geometric Serieses
 
 * Form: `Zr^n`
-* Converges if and only if `|r| < 1`
+* Converges to `1 / (1 - x)` if and only if `|r| < 1`
 
 P-Serieses
 
@@ -55,6 +52,9 @@ My Strategy:
 1. Consider the integral test if its conditions have been met
   and integration seems feasible.
 1. Consider the ratio test.
+
+	let Z be capital sigma
+	let a_n, b_n be some sequences
 
 
 ### The Divergence Test

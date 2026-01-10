@@ -160,4 +160,14 @@ Surface Area
 
 ### Centroids
 
-	TODO
+The centroid between two curves:
+
+	xbar = Sx(f - g)dx / area
+	ybar = (1/2)S|ff - gg|dx / area
+
+Pappus's Theorem:
+
+	volume = averageDistanceTravelled * area
+	averageDistanceTravelled = distanceTravelledByCentroid
+
+
