@@ -1,0 +1,72 @@
+Product of radical expressions, multivariate
+==================================================
+
+---
+
+INDEX
+* Prob 0
+* Prob 1
+* Prob 2
+
+---
+
+
+Prob 0
+==================================================
+
+root(10u^5 y)root(2u^5 y^2)
+root(10u^10y^3)
+root(10y^3)u^5
+~~root(10y)yu^5~~		nope
+
+FORK I didn't preserve the two from the second radical.
+I've been making a lot of frankly dumb mistakes like this?
+Its frustrating because I know the material,
+but I'm repeatedly failing to execute on it properly.
+Honestly, it makes me nervous for the actual test.
+What can I do to fix this?
+
+* slow down. Because I know how to multiply radicals,
+  I'm not taking my time to do it properly I think.
+* Check my work, at least for the actual test.
+  I'm not checking my work, again because I'm trying to go fast.
+  On the test, I should always check my work.
+  My instinct in the past has been just to check it when its more complicated,
+  but then I miss the small mistakes,
+  which are what make the biggest difference.
+  So, check it *always*, and *always* take a second before submitting
+  to think through the problem and ensure it makes sense & can be checked.
+
+
+Prob 1
+==================================================
+
+root( 5 v^8 w 20 v^4 w^3 )
+
+root(100 v^12 w^4)
+
+10 v^6 w^2
+
+I didn't stop to check it again.
+It was right, but dude, chill.
+Dumbass.
+
+
+Prob 2
+==================================================
+
+6 y^4 w^9 2 y^7 w^2
+
+12 y^11 w^11
+2 y^5 w^5 root(3yw)
+
+Let's check it, shall we?
+y = 2 w = 3
+6 * 16 * 
+  27 * 27 * 27
+  729 * 27 fuck this
+Yeah, it looks like it check out, sure.
+(no but really I just went through the process again to confirm)
+
+( '-')b
+

@@ -1,0 +1,83 @@
+Application problem with a linear function: finding a coordinate given two points
+==================================================
+
+---
+
+INDEX
+* Problem 0
+* Problem 1
+* Problem 2
+
+---
+
+
+Problem 0
+==================================================
+
+The credit remaining on a phone card (in dollars) is a
+linear function from the total calling time made with the card (in minutes).
+The remaining credit after 33 minutes of calls is $15.38,
+and the remaining credit after 52min of calls is $12.72.
+What is the reamining credit after 58 minutes of calls?
+
+---
+
+wtf is a phone card?
+Ig it tracks calling time and charges you based on it.
+Thereby, your available credit decreases as calling time increases.
+
+Also, we know its linear,
+so its just a word problem of graphing a line from 2 points.
+
+f(x) = slope? * x + yintercept?
+
+f(33) = 15.38
+f(52) = 12.72
+
+...
+
+
+Problem 1
+==================================================
+
+suppose height of candle is linear function of time its been burning
+(cm:hours)
+
+f(15h) = 16.5cm
+f(33) = 11.1
+f(21) = ?
+
+ 16.5 - 11.1     5.4      -54     -3
+------------- = ------ = ----- = ----
+ 15 - 33         -18      180     10
+
+11.1 = -3(33)/10 + b
+11.1 = -9.9 + b
+21 = b
+
+f(x) = -3x/10 + 21
+
+-3(21)/10 + 21
+-6.3 + 21
+14.7                       <------
+
+
+Problem 2
+==================================================
+
+f(20) = 38.76
+f(46) = 73.86
+
+73.86 - 38.76 = 35.1
+46 - 20       = 26
+slope = 35.1/26
+
+38.76 = 35.1(20)/26 + b
+ = 702/26 + b
+ = 27 + b
+11.76 = b
+
+f(x) = 35.1x/26 + 11.76
+
+35.1(31)/26 + 11.76
+53.61

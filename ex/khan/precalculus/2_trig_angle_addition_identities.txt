@@ -1,0 +1,203 @@
+Using the trig angle addition identities
+==================================================
+
+> khan precalculus, unit 2, lesson 9
+
+---
+
+INDEX
+* Pre-lesson attempt
+* Lesson examples
+* Question 1
+* Question 2
+* Question 3
+* Question 4
+* Question 5
+* Question 6
+* Question 7
+
+---
+
+
+Pre-lesson attempt
+==================================================
+
+triangle:
+a, b, c = 4, 2, 2root5
+C = 90:deg:
+
+~~find angle A * 2~~
+Find sin(2 * A).
+
+---
+
+Well, I don't know about trig angle addition identities,
+but my instinct is just to use the law of cosines?
+
+cosA = ( 2^2 + (2root5)^2 - 4^2 ) / 2(2)(2root5)
+
+cosA = ( 4 + 20 - 16 ) / (6root5)
+cosA = 8/(6root5)
+A = arccos(8/(6root5))
+	we don't need -A
+
+Ohhhh ... ?
+We don't get a calculator for this one.
+That changes things then.
+
+---
+
+Wait, I know this triangle though?
+The ratio between the angles is the same as
+the ratio between their sides,
+So 2:4 must mean the triangles angles are 30:60?
+
+A = 60:deg:
+
+Uhh ... does it want the answer in radians or degrees?
+It doesnt say,
+but it also doesn't say to round.
+
+---
+
+OH!
+I'm blind maybe?
+It also wants the answer as sin(2 * A), not just 2 * A.
+
+2pi/3
+pi - 2pi/3 = pi/3
+sin(pi/3) = root(3)/2
+
+Oh, but again, I can't use a calculator for this.
+
+---
+
+Since I know all the sides,
+I could also try to build the ratio for the functions directly?
+
+sin(A) = a/c
+4/(2root5)
+4root5/10
+2root5/5
+
+No, this doesn't help.
+I'm multiplying the argument to sin by 2 anyways.
+
+---
+
+Alright, lets see the lesson, then.
+
+Oh, dang, there's a bunch of specific trig addition identities to remember.
+
+
+Lesson examples
+==================================================
+
+(see addition identities in nt/sin_cos_tan.md)
+
+---
+
+a, b, c = 15, 8, 17
+C = 90:deg:
+
+cos(B + 60:deg:) = ?
+
+cos(x + 60) = cosxcos60 - sinxsin60
+(15/17)(1/2) - (8/17)(root(3)/2)
+(15 - 8root(3))/34
+
+---
+
+a, b, c = 3, 4, 5
+C = 90:deg:
+cos(2 * :angle:B) = ?
+
+cos(B + B) = 2cos(B)^2 - 1
+(2)(3/5)^2 - 1
+18/25 - 1
+-7/25              //yep!
+
+
+Question 1
+==================================================
+
+a, b, c = 8, 6, 10
+sin(B - 60:deg:) = ?
+
+sin(x - 60) = sinxcos60 + sin60cosx    //oops used + instead of -
+= (6/10)(1/2) + (root(3)/2)(8/10)
+= (6/10)(1/2) + (root(3)/2)(8/10)
+= 3/10 + 4root(3)/10
+= 3/10 + 2root(3)/5
+	WAIT!! It should be `-`.
+
+
+Question 2
+==================================================
+
+a,b,c = 16,12,20
+cos(A + 30) = ?
+
+cos(x + 30) = cosxcos30 - sinxsin30
+= (12/20)(root(3)/2) - (16/20)(1/2)
+= 12root(3)/40 - 16/40
+= 3root(3)/10 - 2/5
+
+
+Question 3
+==================================================
+
+a,b,c = 4,3,5
+cos(2A) = ?
+
+cos(x + x) = 2cos(x)^2 - 1
+= 2(3/5)^2 - 1
+= -7/25
+
+hm. Duplicate from lesson essentially.
+
+
+Question 4
+==================================================
+
+a,b,c = 16, 12, 20
+sin(A + 30)
+
+sin(x + 30) = sinxcos30 + sin30cosx
+= (16/20)(root(3)/2) + (1/2)(12/20)
+= 4root(3)/10 + 3/10
+
+
+Question 5
+==================================================
+
+a,b,c = 3,4,5
+cos(B + 60:deg:) = ?
+
+cos(x + 60) = cosxcos60 - sinxsin60
+= (3/5)(1/2) - (4/5)(root(3)/2)
+= 3/10 - 4root(3)/10
+
+
+Question 6
+==================================================
+
+a,b,c = 6, 8, 10
+cos(2A) = ?
+
+cos(2x) = 2cos(x)^2 - 1
+= 2(4/5)^2 - 1
+= 32/25 - 1
+= 7/25
+
+
+Question 7
+==================================================
+
+a,b,c = 4, 3, 5
+sin(2A) = ?
+
+sin(2x) = 2sinxcosx
+= 2(a/c)(b/c)
+= 2(4/5)(3/5)
+= 24/25

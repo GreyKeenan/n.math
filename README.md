@@ -1,1 +1,3 @@
-Grey Keenan's math notes
+
+personal math notes,
+particularly pertaining to math syntax

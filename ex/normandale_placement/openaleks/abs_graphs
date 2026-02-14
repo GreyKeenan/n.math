@@ -1,0 +1,70 @@
+graph abs vaue on plane
+==================================================
+
+---
+
+INDEX
+* Prob 1
+* Prob 2
+* Prob 3
+
+---
+
+
+Prob 1
+==================================================
+
+y = 2|x-2| + 3
+
+x-2 is 0 when x = 2, so 2,3 is the vertex
+	( '-')b
+
+2|0 - 2| + 3 = 7
+
+WRONG:
+
+	0 = 2|x - 2| + 3
+	-3/2 = +/-(x - 2)
+
+	-3/2 = x - 2
+	1/2 = x
+
+	3/2 = x - 2
+	7/2 = x
+
+Ofc those don't work.
+What was I thinking?
+
+-3/2 = |x - 2|
+
+this was where I should've seen the problem.
+These cant be equal since one is pos and the other is negative.
+Therefore, that value of `y` is invalid.
+
+
+Prob 2
+==================================================
+
+y = -2|x + 3| - 5
+
+vertex: (-3, -5)
+
+-2|0 + 3| - 5 = -11
+
+-2|-4 + 3| - 5 = -7
+
+
+Prob 3
+==================================================
+
+y = 3|x-5|+3
+
+vertex: 5, 3
+
+3|0-5|+3 = 18
+3|10-5|+3 = 18
+
+oh these are out of range of the graph on aleks
+
+3|4-5|+3 = 6
+3|6-5|+3 = 6

@@ -1,0 +1,73 @@
+finding time until limit in exponential growth/decay
+==================================================
+
+---
+
+INDEX
+* prob 0
+* Prob 1
+* Prob 2
+
+---
+
+
+prob 0
+==================================================
+
+loan of $40k, 5.25% anual-compound interest
+How many years until $72k+
+Give the smallest whole-number solution.
+
+~~40000 * 5.25^x >= 72000~~
+40000 * 1.0525^x >= 72000
+
+1.0525^x >= 72/40
+
+log_2(8) = 3
+2^3 = 8
+
+x >= log_1.0525(72/40)
+x >= ~11.48732358
+x = 12
+
+40 * 1.0525^12 >= 72      (b'-')b
+40 * 1.0525^11 < 72       ( '-')b
+
+
+Prob 1
+==================================================
+
+4000 w/ 7.25% compound annual interest.
+Years to 7000+?
+smallest whole number answer.
+
+4000 * 1.0725^x >= 7000
+
+1.0725^x >= 7/4
+x >= log_1.0725(7/4)
+x >= ~7.995382545
+
+x = 8
+
+4 * 1.0725^8 >= 7        ( '-')b
+
+
+Prob 2
+==================================================
+
+value starts at 3100
+each year, is 70% of previous year's value
+when will it be <= 1000?
+
+31 * 0.7^x <= 10
+0.7^x <= 10/31
+
+x <= log_0.7(10/31)
+x <= 3.1720...
+
+x = 4
+
+31 * 0.7^4 <= 10       ( '-')b
+x = 3 fails            ( '-')b
+
+

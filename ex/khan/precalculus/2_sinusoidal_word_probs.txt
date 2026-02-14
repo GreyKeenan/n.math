@@ -1,0 +1,274 @@
+Sinusoidal Models, Word Problems
+==================================================
+
+https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:trig/x9e81a4f98389efdf:sinus-models/e/inverse-trig-word-problems
+
+---
+
+INDEX
+* Question 1: solar panel energy
+* Question 2: Ice Cream
+* Generalizing this problem
+* Question 3: yo-yo
+* Question 4: toy boat
+* Question 5: daily temperature high
+
+---
+
+
+Question 1: solar panel energy
+==================================================
+
+> E(t) models the daily amount of energy (in kilojoules, kJ)
+> that a solar panel in Pago Pago generates, *t* days after the autumn equinox.
+> Here, *t* is entered in radians.
+>
+> E(t) = 624:sin:(2:pi:t/365) + 8736
+>
+> What is the first day after the autumn equinox that the solar panel
+> generates 8400 kJ?
+
+So, I'm trying to find t in 8400 = E(t).
+Specifically, the lowest solution t, but > 0.
+
+8400 = 624:sin:(2:pi:t/365) + 8736
+
+-336 = 624sin(2:pi:t/365)
+	336/624
+	168/312
+	56/104
+	28/52
+	14/26
+	7/13
+-7/13 = sin(pi2t/365)
+
+arcsin(-7/13) = pi2t/365 + n2pi
+arcsin(-7/13) = pi - pi2t/365 + n2pi
+
+arcsin(-7/13) = pi2t/365 + n2pi
+= (t/365 + n)2pi
+arcsin(-7/13)/2pi = t/365 + n
+arcsin(-7/13)/2pi - n = t/365
+365(arcsin(-7/13)/2pi - n) = t
+-33.03145609 - 365n = t
+-33.03145609 + 365n = t   (since n is any integer)
+
+(wrong at first)
+arcsin(-7/13) = pi - pi2t/365 + n2pi
+arcsin(-7/13) - pi = 2pi(t/365 + n)        // mistake here. Didnt preserve neg
+(arcsin(-7/13) - pi)/2pi = t/365 + n
+(arcsin(-7/13) - pi)/2pi - n = t/365
+365((arcsin(-7/13) - pi)/2pi - n) = t
+~~-215.5314561 - 365n = t~~            WRONG: failed check with orig equation
+	arcsin(-7/13) = pi - pi2t/365 + n2pi
+		s = arcsin(-7/13)
+	s - pi - n2pi = pi2t/365           // same mistake a second time
+	s/2pi - 1/2 - n = t/365
+	365s/2pi - 365/2 - 365n = t
+	365arcsin(-7/13)/2pi - 365/2 - 365n = t
+	-33.03145609 - 182.5 - 365n = t
+	-215.5314561 - 365n = t              ~~Hm. Is this not WRONG?~~
+	yes, it was wrong. again.
+arcsin(-7/13) = pi - pi2t/365 + n2pi
+	s = arcsin(-7/13)
+s - pi - n2pi = -pi2t/365              // keep the minus, dumbass
+-s/2pi + 1/2 + n = t/365
+-365s/2pi + 365/2 + 365n = t
+33.0314560948 + 182.5 + 365n = t
+215.5314560948 + 365n = t
+
+
+Technically, would solve each solution for t > 0,
+but its clear that 216 is the first day.
+
+
+Question 2: Ice Cream
+==================================================
+
+An ice cream truck that plays loud music
+is circling Bulan's neighborhood.
+C(t) models the volume of the music (in dB) that Bulan hears,
+t minutes after the truck arrives in her neighborhood.
+Here, t is entered in radians.
+
+C(t) = -15cos(t2pi/15) + 65
+
+How many minutes after the truck arrives does the volume first reach 75dB?
+(round to the tenth of a minute)
+
+75 = C(t)
+find the lowest *t* >= 0
+
+75 = -15cos(t2pi/15) + 65
+-2/3 = cos(t2pi/15)
+arccos(-2/3) = +/- t2pi/15 + n2pi
+
+arccos(-2/3) - n2pi = t2pi/15
+15(arccos(-2/3) - n2pi)/2pi = t
+34.507859745/2pi - 15n = t
+5.4920964539 - 15n = t
+
+5.4920964539 + 15n = +/-t
+
+why is this wrong:
+
+	D - 15n = +/-t
+	-D + 15n >= 0
+	D - 15n >= 0
+
+	-D + 15n >= 0
+	n >= D/15
+	n >= 0.3661397636
+
+	D - 15n >= 0
+	n <= -D/-15
+	n <= D/15
+	n <= 0.3661397636
+
+	D + 15n >= 0
+	n >= -D
+	n >= -D/15
+	n >= -0.3661397636
+
+	-D - 15n >= 0
+	-15n >= D
+	n <= -D/15
+
+-D + 15 or D - 15 or D?
+	I need the lesser of these.
+
+	(I forgot that the solution can just be "D" if its the smallest)
+
+
+Generalizing this problem
+==================================================
+
+bcos(tc) + d = a
+cos(+/-tc + n2pi) = (a - d)/b
++/-tc + n2pi = arccos((a - d)/b)
++/- t = (arccos((a-d)/b) + n2pi)/c
+/          arccos((a - d)/b) + n2pi
+: +/- t = --------------------------
+\                    c
+
+n :ce: {ZZ}
+
+
+Question 3: yo-yo
+==================================================
+
+Isabella is playing with her yo-yo.
+The vertical distance Y (in cm) between the yo-yo and her hand t seconds after
+she first spins it out is modeled by the following function.
+Here, t is in radians.
+
+Y(t) = 40cos(t2pi/3) - 71
+
+How long does it take the yo-yo to fall all the way down from its peak,
+and then rise up to a vertical distance of -80cm?
+Round your final answer to the nearest tenth of a second.
+
+So we want the *second* t where Y(t) = -80, t > 0.
+
+a = -80
+b = 40
+c = 2pi/3
+d = -71
+
++/- t = (arccos((a-d)/b) + n2pi)/c
+
+/          arccos((-80 - -71)/40) + n2pi
+: +/- t = -------------------------------
+\                   2pi/3
+/          arccos(-9/40)     n2pi
+: +/- t = --------------- + -------
+\               2pi/3        2pi/3
+/          3arccos(-9/40)     3n2pi
+: +/- t = ---------------- + -------
+\               2pi           2pi
+/          3arccos(-9/40)
+: +/- t = ---------------- + 3n
+\               2pi
+/          5.393218089
+: +/- t = ------------- + 3n
+\               2pi
+
++/- t = 0.858357318 + 3n
+
+t = +/- 0.858357318 + 3n
+
+OH CRAP I USED THE *FIRST* SOLUTION
+
+* 0.858 ...
+* 2.142 ...      <----
+* 3.858 ...
+
+
+Question 4: toy boat
+==================================================
+
+Antonio's toy boat is bobbing in the water under a dock.
+The vertical distance H (in cm) between the dock and the top of the boat's
+mast t seconds after its first peak is modeled by the following function.
+Here, t is entered in radians.
+
+H(t) = 5cos(t2pi/3) - 35.5
+
+How long does it take the toy boat to bob down from its peak
+to a height of -35cm?
+Round your final answer to the nearest tenth of a second.
+
+a = -35
+b = 5
+c = 2pi/3
+d = -35.5
+
+/          arccos((a - d)/b) + n2pi
+: +/- t = --------------------------
+\                    c
+
+/          arccos((-35 - -35.5)/5) + n2pi
+: +/- t = --------------------------------
+\                    2pi/3
+/          3arccos(1/10)
+: +/- t = --------------- + 3n
+\               2pi
+
++/- t = 0.7021735793 + 3n
+
+
+Question 5: daily temperature high
+==================================================
+
+T(t) models the daily high temperature (in :deg:C) in Santiago,
+Chile, t days after the hottest day of the year.
+Here, t is entered in radians.
+
+T(t) = 7.5cos(t2pi/365) + 21.5
+
+What is the second time after the hottest day of the year that
+the daily high temperature is 20 :deg:C?
+Round your final answer to the nearest whole day.
+
+a = 20
+b = 7.5
+c = 2pi/365
+d = 21.5
+
+/          arccos((a - d)/b) + n2pi
+: +/- t = --------------------------
+\                    c
+/          arccos((20 - 21.5)/7.5) + n2pi
+: +/- t = --------------------------------
+\                    2pi/365
+/          365arccos(-1/5)
+: +/- t = ----------------- + 365n
+\                2pi
+
++/- t = 102.9471945758 + 365n
+
+d + 365(0)
+-d + 365(1)   <----    262.0528...
+d + 365(1)
+
+

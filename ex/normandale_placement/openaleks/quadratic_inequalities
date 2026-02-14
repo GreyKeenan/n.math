@@ -1,0 +1,125 @@
+Solving a quadratic inequality written in factored form
+==================================================
+
+---
+
+INDEX
+* Problem 0
+* Problem 1
+* Problem 2
+* Problem 3
+* Problem 4
+
+---
+
+
+Problem 0
+==================================================
+
+(x - 4)(x + 2) < 0
+
+WRONG:
+x < -2
+x < 4
+
+they cant *both* be negative, cuz then its positive again.
+
+x = 4 -> 0
+x < 4 -> negative
+x > 4 -> positive
+
+x = -2 -> 0
+x < -2 -> negative
+x > -2 -> positive
+
+cases where it would be < 0:
+x < -2 & x > 4     not possible
+x > -2 & x < 4     this one
+
+
+Problem 1
+==================================================
+
+(x + 5)(x - 3) > 0
+
+x = -5 -> 0
+x > -5 -> positive
+x < -5 -> negative
+
+x = 3 -> 0
+x > 3 -> positive
+x < 3 -> negative
+
+im a moron
+	x < 3 & x > -5
+	x > 3 & x < -5    not possible
+	(-5, 3)
+
+x > -5 & x > 3
+x < -5 & x < 3
+
+(-inf, -5) UOR (3, inf)
+
+
+Problem 2
+==================================================
+
+x(x - 6) <= 0
+
+x = 0 UOR x = 6 UOR x < 6
+NOPE
+
+if x is negative, so is (x - 6),
+so it becomes positive.
+
+I hate inequalities, man.
+
+
+Problem 3
+==================================================
+
+(x + 7)(x + 1) < 0
+
+x > -7 : pos
+x < -7 : neg
+x > -1 : pos
+x < -1 : neg
+
+x > -7 and x < -1
+~~x < -7 and x > -1~~
+
+(-7, -1)         ( '-')b
+
+
+Problem 4
+==================================================
+
+(x - 5)(x + 7) >= 0
+
+x > 5  : pos
+x < 5  : neg
+x > -7 : pos
+x < -7 : neg
+
+x > 5 & x > -7
+x < 5 & x < -7
+
+(-inf, -7], ~~[0, 0],~~ [5, inf)   you idiot. Go to sleep.
+
+
+Problem 5
+==================================================
+
+> no, you cant make me!
+
+(x - 6)(x - 1) <= 0
+
+x > 6 : pos
+x < 6 : neg
+x > 1 : pos
+x < 1 : neg
+
+~~x > 6 & x < 1~~
+x < 6 & x > 1
+
+[1, 6]         ( '-')b

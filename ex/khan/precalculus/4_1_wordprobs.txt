@@ -1,0 +1,447 @@
+Rational expressions/functions: word problems
+==================================================
+
+---
+
+INDEX
+* problem -1
+  * being dumb about it
+  * Being not-dumb about it
+* Problem -2
+* Problem -3
+* Problem -4
+  * Their Approach
+* (lesson interlude)
+* Problem 1
+* Problem 2
+* Problem 3
+* Problem 4
+
+---
+
+
+These problems seem like a non sequitur with the rest of this unit.
+
+
+problem -1
+==================================================
+
+A company has 35% and 3% hydrogen peroxide solutions.
+They need an 8L container with a 12% concentration of hydrogen peroxide.
+How much of the 3% hydrogen peroxide solution
+should they include in the container?
+
+(calculator given)
+(rounding guidelines are not given)
+
+---
+
+Okay, so they *have* 2 solutions.
+One is 35% hydrogen peroxide and the other is 3%.
+For all the possible combinations of the two
+which result in a 12% solution,
+which is 8L total,
+and how many litres of that are from the 3% solution.
+
+
+being dumb about it
+--------------------------------------------------
+
+if a is the amount of 35% solution,
+and b is the amount of 3% solution,
+then a + b = 8L.
+
+~~0.35a + 0.03b = 8 * 0.12~~
+	{this was the right direction to go down}
+
+b3/(a35) = 12
+
+a = 8 - b
+a = b3/(12 * 35)
+
+
+8 - b = b3/420
+8(420) - 420b = 3b
+8(140) - 140b = b
+8(140) = 141b
+8(140)/141 = b
+1120/141 = b
+7.9432624113 ~= b
+
+Hm. Well that's totally wrong.
+
+
+Being not-dumb about it
+--------------------------------------------------
+
+One is 35 parts HP and 65 parts else.
+Other is 3 parts HP and 97 parts else.
+
+If I added them together it would be 38:162.
+If I were to scale that back down to 100 total,
+I would essentially just be averaging each part.
+
+No, no, hang on.
+
+8 * 0.12 = 0.96
+8 - .96 = 7.04
+
+0.35a + 0.03b = 0.96
+and
+0.65a + 0.97b = 7.04
+
+For simplicity, lets scale it up.
+
+35a + 3b = 96
+65a + 97b = 704
+
+35a = 96 - 3b
+65a = 704 - 97b
+
+a = (96 - 3b)/35
+a = (704 - 97b)/65
+
+/  96 - 3b     704 - 97b
+: --------- = -----------
+\    35           65
+35(704 - 97b) = 65(96 - 3b)
+24640 - 3395b = 6240 - 195b
+24640 = 6240 + 3200b
+18400 = 3200b
+18400/3200 = b
+23/4 = b
+5.75 = b
+
+Correct!
+
+But, uh, I didn't solve it the type of
+rational expression reasoning this lesson is about
+
+
+Problem -2
+==================================================
+
+There is a 30% concentration of cobalt chloride in
+90g of a water and cobalt chloride solution.
+What mass, in grms, of water has to evaporate
+t have a 40% concentration of cobalt chloride?
+
+---
+
+90 * 0.3 = 27
+90 * 0.7 = 63
+
+27 / x = 0.4
+x = 67.5     grams of solution in which 27 would be 40%
+
+90 - 67.5 = 22.5
+
+correct ( '-')b
+
+Again, not the way I was supposed to though.
+
+
+Problem -3
+==================================================
+
+Dane is using two differently sized water pumps to clean up flooded water.
+The larger pump can remove the water alone in 240 min.
+The smaller pump can remove the water alone in 400 min.
+How long would it take the pumps to remove the water working together?
+
+---
+
+1 flooded water per 240 min
+1 flooded water per 400 min
+
+5 flooded water per 1200 min
+3 flooded water per 1200 min
+
+8 per 1200
+1 per 150 min
+
+correct ( '-')b
+
+... ?
+
+I srsly wonder how I'm meant to be doing these but ???
+Like, theyre doable w/o anything special??
+
+
+Looking at the example, thats how they solved it too.
+Soo ... whats the point?
+
+
+Problem -4
+==================================================
+
+Naira paddled 4.5km with the current in the same amount of time
+as it took her to paddle 3km against the current.
+Naira paddled at an average rate of 5km/h relative to the water each way.
+Assume the speed of the current was constant.
+What was the speed of the current?
+
+---
+
+4.5 km / 1 <time>
+3 km / 1 <time>
+
+5km/h ... ?
+
+I'm confused here.
+Its 5km/h "relative to the water each way".
+Not sure what exactly they mean by that.
+has 5km/h been scaled somehow?
+Wdym "relative to the water"?
+
+Idk. I'm hung up on the language here.
+
+
+Their Approach
+--------------------------------------------------
+
+distance = rate * time
+
+rate w/ current:
+5kmph + c_speedofcurrent
+
+{ see, I wouldve thought by what they were saying
+that (5kmph = speedofcurrent + regular_rate),
+since it says "relative to the water".
+I dont understand, though.
+What was it "relative to"?
+
+If it doesn't account for the current ...
+Is it that its 5kmph average across *both* ways?
+No, but how would that be though. And why?
+
+}
+
+rate against current:
+5kmph - c
+
+time with current:
+4.5/(5 + c)
+
+time against:
+3/(5 - c)
+
+
+4.5/(5 + c) = 3/(5 - c), solve for c
+4.5(5 - c) = 3(5 + c)
+22.5 - 4.5c = 15 + 3c
+7.5 = 7.5c
+1 = c
+
+(to confirm, check that none of the rates == 0 with this C)
+
+
+(lesson interlude)
+==================================================
+
+see "./modeling_with_rationals.txt"
+
+
+Problem 1
+==================================================
+
+A seasoning blend is 4% onion powder by mass.
+How much pure onion powder should they include
+in a 72g bottle to make the final blend have 20% onion powder.
+
+---
+
+This is a confusing way to put it imo.
+I think its saying:
+
+You have a seasoning blend with 4% onion powder.
+If you combined the blend & 100% onion powder in a 72g bottle,
+what percent would have to be from the pure onion powder
+to have 20% onion powder total.
+
+Alternatively, it could be saying:
+We have a blend with 4% OP.
+If it was 20% OP, how much OP would be in a 72g bottle.
+
+---
+
+72 * 2/10 = 14.4
+
+ 0.04x + p     14.4
+----------- = ------
+ x     + p      72
+
+... maybe it is asking the second thing?
+That would be stupid though.
+Im going to try it.
+No, it isnt the second thing.
+Well I had to know at least.
+
+Wait, can I solve it separately like I was doing before the lesson?
+
+0.04x + p = 14.4
+0.04x - 14.4 = -p
+14.4 - 0.04x = p
+
+x + p = 72
+p = 72 - x
+
+14.4 - 0.04x = 72 - x
+0.04x - 14.4 = x - 72
+57.6 = 0.96x
+60 = x                  <----
+
+p = 12               <----
+
+correct ( '-')b
+
+thanks a lot, lesson ;p
+
+Wait, did one of the terms cancel out or something?
+Was it solve-able before?
+
+ 0.04x + p     14.4
+----------- = ------
+ x     + p      72
+
+14.4(x + p) = 72(0.04x + p)
+14.4x + 14.4p = 2.88x + 72p
+11.52x = 57.6p
+
+no I dont think so.
+
+
+Problem 2
+==================================================
+
+Ujarak has 100mL of strong toothpaste with 1.1% sodium flouride.
+Also has weaker 0.3% flouride paste.
+How many mL of weaker toothpaste would they need to add
+to create a blend with 0.8% flouride?
+
+---
+
+ 100 * 0.011     1.1
+------------- = -----
+ 100             100
+
+ 0.003x
+--------
+ x
+
+ 1.1 + 0.003x     0.008(100 + x)
+-------------- = ----------------
+ 100 +      x     100 + x
+ 1.1 + 0.003x
+-------------- = 0.008
+ 100 + x
+
+1.1 + 0.003x = 0.008(100 + x)
+1.1 + 0.003x = 0.8 + 0.008x
+0.3 = 0.005x
+0.3/0.005 = x
+
+60 = x
+
+( '-')b
+
+
+Problem 3
+==================================================
+
+Together, D and T weed their garden in 30 minutes.
+Alone, T weeds it in 75 minutes.
+How long does D take alone?
+
+---
+
+1/30 = 1/75 + 1/x
+5/150 = 2/150 + 1/x
+3/150 = 1/x
+1/50 = 1/x
+x = 50
+
+5/150 = 2/150 + 3/150
+
+( '-')b
+
+
+Problem 4
+==================================================
+
+Nizhoni adds water at a constant rate
+to a 2L reservoir in a water filtering pitched until its full.
+At the same time, water goes through the filter and out of the reservoir,
+into the pitcher.
+It takes 5/11 minutes to fill the reservoir,
+then another 10/3 minutes for the reservoir to empty.
+At what rate does Nizhoni add water to the reservoir? (L/min)
+
+---
+
+notice that he *stops* filling it. He goes "until it is full".
+
+rate he is filling - rate it is leaking = 2L/(5/11min)
+
+rate it is leaking = 2L/(10/3min)
+
+ x        2       2
+---  -  ------ = ------
+ 1       10/3     5/11
+ x        6     22
+---  -  ---- = ----
+ 1       10     5
+ x     44     6
+--- = ---- + ----
+ 1     10     10
+x = 50/10
+x = 5
+
+( -_-)b  getting sleepy
+
+
+Problem 5
+==================================================
+
+A factory has a batch of hand sanitizer with 50% alcohol.
+How much pure (100%) acohol should they include in a
+600mL bottle to make a 68% mixture?
+
+---
+
+ 0.5x + p     600 * 0.68
+---------- = ------------
+  x   + p        600
+
+solve for p
+
+0.5x + p = 408
+x/2 = 408 - p
+x = 816 - 2p
+
+x + p = 600
+x = 600 - p
+
+600 - p = 816 - 2p
+600 + p = 816
+p = 216                   <---
+
+x = 384
+
+check:
+
+ 0.5x + p     600 * 0.68
+---------- = ------------
+  x   + p        600
+
+ 384/2 + 216     408
+------------- = -----
+ 384 + 216       600
+
+	384/2 = 192
+	192 + 216 = 408
+
+d( -_-)b     sleep now please
+
+Yeah, this was a lot easier after the lesson no surprise.
+I'm glad I messed around with it first though.

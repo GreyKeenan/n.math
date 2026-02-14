@@ -1,0 +1,166 @@
+
+* where should this stuff go
+  * quadratics
+  * like quadratics but for cubes
+  * ~~abs~~
+
+* logic
+* what are numbers
+  * the number line
+  * negative numbers
+  * infinity
+  * units
+  * <-> sets of numbers
+  * -> imaginary numbers
+  * numbering systems, bases
+    * decimal, ofc
+    * in computing: binary, hexadecimal, octal, base-64
+    * duo-decimal
+* notation
+  * syntax-to-notation
+  * -> bases
+* statistics
+  * ... (oh god this is a whole entire other massive category)
+* division
+  * fractions
+  * ratios
+  * reciprocals
+  * decimal values
+  * percentages
+  * -> polynomial division
+* fundamental geometry
+  * lines
+    * line formulas
+    * curves vs straight
+      * slopes
+      * tangents
+    * angles
+    * continuity
+    * vectors
+    * waves
+  * polygons
+    * triangles
+      * why they are so important
+      * basic triangulation with right triangles
+      * reference to trig
+    * quadrilaterals
+  * curves
+    * ellipses
+      * circles
+        * unit circle & pi
+    * parabolas
+* exponentiation
+  * exponents
+  * roots
+  * non-natural-number exponents
+  * logarithms
+  * e
+  * tetration +
+* algebra  (does this need to be a thing?)
+* sets
+  * defining sets
+  * intersection, union, etc
+  * major sets
+    * naturals, integers, rationals, reals, complex
+* polynomials
+  * bi- tri- etc
+  * standard form
+  * binomial theorem
+  * eliminating roots
+  * polynomial long division, synthetic division
+* rationals
+  * behavior towards infinity, without -> limits
+* iteration
+  * summation
+  * product-thing
+* functions
+  * notation
+  * composition
+  * inverses
+  * -> continuity
+  * -> major groups of functions
+    * trig
+    * log
+    * ... ?
+* matrices
+* complex/imaginary numbers
+* trig
+  * trig functions - what they are
+    * -> unit circle, -> right triangles
+    * as -> waves
+    * notation details
+    * special values
+    * laws
+    * identities
+      * reflection/rotation
+      * addition, algebraic
+   * inverses
+   * reciprocals
+   * limits
+   * derivatives
+* limits
+  * what it is
+  * notation
+  * one-sided
+  * non-limits
+  * limit laws
+  * squeeze theorem, inequalities
+  * infinite limits, limits at infinity, combo
+* derivatives
+  * conceptually
+    * graphically
+    * practically
+  * as a defined limit
+  * higher derivatives
+  * notation
+    * prime
+    * leibniz
+  * differentiation
+    * by definition
+    * when cant you?
+    * by differentiation rules
+      * polynomials
+      * rationals
+    * logarithmic differentiation
+  * differentiation rules
+    * constant functions
+    * addition & subtraction
+    * power rule
+    * constant multiple rule
+    * product & quotient rules
+    * exponentials & logarithms
+    * chain rule - function composition
+
+
+Problems
+==================================================
+
+In addition to covering things by topic,
+another area which discusses things by type-of-problem
+would be really useful to draw together those ideas
+in a practical context.
+This could be extremely expansive,
+but I'll just fill it in as I go.
+
+* about approaching word problems
+* rates-of-change
+* tangents
+* measuring distance
+* intersecting lines
+* finding unknown values
+* solving surrounding exponents
+  * quadratics
+  * using logs
+
+* sketching a graph using derivatives
+* calc optimization problems
+* calc related rates problem
+* newton's method
+* linear approximation
+
+
+To-Learn
+==================================================
+
+* "convergence" in regards to continued fractions
+* euler's formula, euler's identity

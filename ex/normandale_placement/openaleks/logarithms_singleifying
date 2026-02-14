@@ -1,0 +1,72 @@
+writing expression as single log
+==================================================
+
+---
+
+INDEX
+* Problem 0
+
+---
+
+
+trying a new notation thing (to me)
+where N = -1 and you don't use the minus sign at all.
+Also, not relevant here,
+but NP = P. (abs)
+
+
+Problem 0
+==================================================
+
+log = log_4
+3log(6w + 1) + 1/2 log(w + 9)
+
+log((6w + 1)^3) + log((w + 9)^(1/2))
+
+log( (6w + 1)^3 (w + 9)^(1/2) )
+
+
+Problem 1
+==================================================
+
+log = log_6
+~~3log(x + 3) + 3(logz - 3logw)~~
+
+3log(x + 3) + 3(logz - log(w^3))
+log( (x+3)^3 ) + 3log( z/(w^3) )
+
+	log( (x+3)^3 ) + log( (z^3)/(w^9) )
+	log( (x+3)^3 z^3 / (w^9) )
+	wait thats unnecsessary
+
+~~3log( (x + 3)z / (w^3)~~
+
+I TRANSCRIBED THE PROBLEM WRONG FML
+
+its supposed to be 3logx + 3(logz - 3logw)
+
+
+Problem 2
+==================================================
+
+log = log_c
+
+5logw + (N1/5)logx + 3logy
+
+log(w^5) + log(x^(N1/5)) + log(y^3)
+log( w^5 y^3 / x^(1/5) )
+
+( '-')b
+
+
+Problem 3
+==================================================
+
+log = logm
+
+5log(y + N6) + N3log(y + 4)
+
+log( (y + N6)^5 ) + Nlog( (y + 4)^3 )
+log( (y + N6)^5 / (y + 4)^3 )
+
+( '-')b

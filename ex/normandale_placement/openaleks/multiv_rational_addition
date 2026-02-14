@@ -1,0 +1,90 @@
+adding rationals, multivariate
+==================================================
+
+---
+
+INDEX
+* Problem 1
+* Problem 2
+* Problem 3
+* Problem 4
+
+---
+
+
+Problem 1
+==================================================
+
+ 4ww        5au
+-------- + ---------
+ 3aaabb     9bbbccc
+
+ 4ww9bbbcccc + 5au3aaabb
+-------------------------
+ 3aaabb9bbbccc
+
+ 36wwbbbcccc + 15aaaabbu
+-------------------------
+ 27aaabbbbbccc
+
+WRONG: NOT SIMPLIFIED ENOUGH
+
+Ohh, ofc, 27aaabbbbbccc isnt the LCM.
+Its 9bbbaaacc
+
+
+Problem 2
+==================================================
+
+ 5aau       yy
+------  -  ---------
+ 12bd       9aaaddd
+
+LCDENOM: 36 a^3 b d^3
+
+5aau 3aaadd  =  15 a^5 dd u
+12bd 3aaadd  =  36 a^3 b d^3
+
+9aaaddd 4b   =  36 a^3 b d^3
+yy      4b   =  4byy
+
+ 15a^5ddu - 4byy
+-----------------            ( '-')b
+ 36 a^3 b d^3
+
+
+Problem 3
+==================================================
+
+ 4kkku       x
+-------  -  --------
+ 3ac         9cckkk
+
+LCD: 9acckkk
+  3ac * 3ckkk
+  9cckkk * a
+
+ 12k^6 uc  +  -ax
+------------------    WRONG
+ 9acckkkk            <--- I added an extra k here.
+                          Imma stop doing the tons of a letter thing
+                          2 is the limit.
+
+
+Problem 4
+==================================================
+
+ 5kkww     2v
+------- + ---------
+ 6bbd      3b^3 kk
+
+LCD: 6b^3 kkd
+
+6bbd * kkb
+3b^3 kk * 2d
+
+ 5 k^4 ww b  +  4vd
+--------------------      ( '-')b
+ 6 b^3 kkd
+
+

@@ -1,0 +1,138 @@
+Using Trigonomic Identities
+==================================================
+
+> khan precalc, unit 2, lesson 10
+
+---
+
+INDEX
+* Pre-lesson
+  * Question 0
+  * Question -1
+  * Question -2
+
+---
+
+
+Pre-lesson
+==================================================
+
+Question 0
+--------------------------------------------------
+
+* find the exact value
+* no calculator
+
+sin(5pi/12) = ?
+
+multiple choices:
+1.  (-root2 - root6)/ 4
+2.  (root2 - root6) / 4
+3.  (root6 - root2) / 4
+4.  (root6 + root4) / 4
+
+---
+
+Well, without a calculator,
+we can solve for pi/2, pi/3, pi/4, and pi/6.
+How can I make (5pi/12) those, or break it up into those?
+
+5/12 = 2/12 + 3/12 = 1/6 + 1/4
+
+Oh, well, I guess that's how.
+
+// Um, i used '1' here instead of pi? Dumbo.
+// It didn't matter though since I was using memorized values.
+sin(1/6 + 1/4) = sin(1/6)cos(1/4) + sin(1/4)cos(1/6)
+= (1/2)(root2/2) + (root2/2)(root3/2)
+= root2/4 + root6/4
+
+
+Question -1
+--------------------------------------------------
+
+tan(19pi/12) = ?
+
+multiple choices:
+1.  (-3 + root3) / (3 + root3)
+2.  (3 - root3) / (3 - root3)     // okay well it cant be this one, right?
+3.  (3 - root3) / (3 + root3)
+4.  (3 + root3) / (-3 + root3)    // nor this one? Like, it wouldnt be |1|.
+
+---
+
+Okay, well,
+I could take some time to try to find the tan addition identities myself,
+or I could just get it from the lesson.
+Normally, I would try to find them myself,
+but I am trying to get this stuff done in time to qualify
+for calc this summer,
+so Imma do the lesson.
+
+Oh, wait, I skipped over the tangent addition identities on accident!
+(from the last lesson)
+
+---
+
+Okay, got that noted down.
+Let's try again.
+
+19pi/12
+
+Well, I can subtract 1pi from tan argument without affecting.
+
+7pi/12 = 4pi/12 + 3pi/12 = pi/3 + pi/4
+
+tan(pi/3 + pi/4) = (tan(pi/3) + tan(pi/4)) / (1 - tan(pi/3)tan(pi/4))
+/  tan(pi/3) + tan(pi/4)
+: ------------------------
+\  1 - tan(pi/3)tan(pi/4)
+/  sin(pi/3)/cos(pi/3) + 1
+: ----------------------------
+\  1 - sin(pi/3)/cos(pi/3)(1)
+/  (root3/2)/(1/2) + 1
+: ----------------------------
+\  1 - (root3/2)/(1/2)
+/  root3 + 1
+: ----------------------------
+\  1 - root3
+/  3 + root3
+: ------------
+\  root3 - 3
+
+ay, thats right! coolio
+
+
+Question -2
+==================================================
+
+cos(3pi/4)cos(5pi/12) - sin(3pi/4)sin(5pi/12)
+
+---
+
+Okay, well, that is the same as
+cos(3pi/4 + 5pi/12)
+cos(14pi/12)
+
+I could break it down to more than a binomial,
+and then solve multiple cos-es.
+Or, I could try to break it down to *just* a binomial?
+
+14/12 -> 7/6 -> pi + pi/6
+-> -cos(pi/6) = cos(pi/6 + pi)
+
+Oh, wait, that's even easier than I thought then!
+
+-cos(pi/6) = -root3/2
+
+
+Question -3
+==================================================
+
+sin(pi/8)cos(pi/8) + cos(pi/8)sin(pi/8)
+
+---
+
+sin(2pi/8)
+sin(pi/4)
+1/root2 = root2/2

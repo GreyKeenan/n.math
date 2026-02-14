@@ -1,0 +1,257 @@
+
+Work for khan:precalc:unit2:quiz2: "trigonometry"
+
+Its just the work, not as organized for future return
+
+---
+
+INDEX
+* Question 1
+* Question 2
+* Question 3
+* Question 4: learned something here
+* Question 5
+
+---
+
+Question 1
+==================================================
+
+16 = -10cos(t2pi/150) + 10; find the first solution > 0
+
+---
+
+-3/5 = cos(+/- t2pi/150 + n2pi)
+
+arccos(-3/5) + n2pi = +/- t2pi/150
+150arccos(-3/5) + 150n2pi = +/- t2pi
+150arccos(-3/5)/i(2pi) + 150n = +/- t
+52.8624573527
+
+double-check passed!
+
+D + 0
+-D + 150
+D + 150
+
+
+Question 2
+==================================================
+
+9sin(18x) + 11 = 2
+
+(in radians)
+
+find expressions which, together, represent the solution set
+
+---
+
+sin(+/- 18x + n2pi) = -1
+
++/- 18x + n2pi = -pi/2
++/- x18 = -pi/2 + n2pi
++/- x = (-pi/2)/18 + n2pi/18
++/- x = -pi/36 + npi/9
+
+OH CRAP ITS SIN NOT COS!
+
+sin(18x + n2pi) = -1
+
+sin(pi - 18x + n2pi) = -1
+
+pi - 18x + n2pi = -pi/2
+-18x = -pi/2 - pi + n2pi
+x = pi/36 + pi/18 + npi/9
+x = 3pi/36 + npi/9
+x = pi/12 + npi/9
+
+This solution is right, but it doesnt fit the multiple choice.
+How else can it be rearranged?
+
+-18x = -pi/2 - pi + n2pi
+= 3pi/2 + n2pi
+
+x = pi/12 + npi/9
+x = 3pi/36 + n4pi/36
+x = (3pi + n4pi) / 36
+x = ( (3 + n4)pi )/36
+
+
+I... I dont understand. It says the only equation needed is the first one?
+Its not that the question isnt asking for multiple.
+It says "... that together represent all solutions to the equation."
+
+Imma transcribe it all:
+
+---
+
+Select one or more expressions that together represent
+all solutions to the equation.
+Your answer should be in radians.
+Assume n is any integer.
+
+9sin(18x) + 11 = 2
+
+choose all answers that apply:
+
+[ ] -pi/2 + n2pi
+[y] -pi/36 + npi/9
+[ ] npi
+[N] pi/36 + npi/9
+[ ] pi/2 + npi/11
+[ ] pi/2 + npi
+
+Strategy:
+If we isolate the sine function,
+we can use the inverse sine function to find one value
+of 18x (between -pi/2 and pi/2).
+
+The sine function has two useful identities that
+we can use to extend that one value of 18x to
+all possible values.
+
+* sin(x) = sin(pi - x)
+* sin(x) = sin(x + 2pi)
+
+Finally, we solve each set of solutions for x.
+
+Isolate the sinusoidal function
+9sin(18x) + 11 = 2
+9sin(18x) = -9
+sin(18x) = -1
+
+Find all values of 18x between -pi and pi.
+
+Our argument is 18x.
+
+asin(-1) = -pi/2
+
+Since -1 is a trough,
+it is the only solution in this interval.
+
+> what does that mean??
+
+Finding all solutions:
+
+Using the identity sin(x) = sin(x + 2pi),
+we can find all the solutions to our equation
+from the angle we found above.
+The solution gives us the following.
+
+...
+
+AAHHH I ACCIDENTALLY CLOSED IT
+
+"The following" was just solving to find the solution
+using that identity.
+It doesn't mention the sin(pi-x) identity again.
+
+---
+
+
+Question 3
+==================================================
+
+Aislinn is holding a pendulum.
+The function D(t) models the horizontal distance, in cm,
+of the end of the pendulum from their body t seconds after releasing the end.
+
+D(t) = 35 + 9cos(2.4t)
+
+What does the least positive solution for
+38 = D(t) represent?
+
+correct: "the number of seconds when the pendulum is first 38cm from Aislinn."
+
+
+Question 4: learned something here
+==================================================
+
+6sin(8x) + 2 = 3
+
+find the expressions that represent the solution set
+
+(degrees)
+
+---
+
+sin(8x + n2pi) = -5/6
+sin(pi - 8x + n2pi) = -5/6
+
+8x + 360n = asin(-5/6)
+x = asin(-5/6)/8 + 360n/8
+x = -56.44269024/8 + 45n
+x = -7.05533628 + 45n
+<passes check>
+
+180 - 8x + 360n = asin(-5/6)
+-8x = asin(-5/6) + 360n - 180
+x = asin(-5/6)/8 + 360n/8 - 180/8 <---- mistake, lost the(-)
+x = -7.05533628 + 45n - 22.5
+x = -29.55533628 + 45n
+<passes check>
+isnt an option? again? What am I misunderstanding here?
+
+-8x = asin(-5/6) + 360n - 180
+x = -asin(-5/6)/8 + 45n + 22.5
+x = 7.05533628 + 45n + 22.5
+x = 29.55533628 + 45n
+<passes the check as well>
+still isnt an option
+
+Hm. x ~= -15.45 works too.
+
+---
+
+Well, the way they did it,
+was to have the extra "180" be negative to begin with.
+Ofc with an angle 180 = -180,
+but how would I know to do that?
+Are they not, technically, missing a solution by omitting the 29... value?
+
+> They do:
+> isolate sin(8x)
+>
+> sin(8x) = -5/6
+> 8x ~= -56.44
+>
+> -180 - (-56.44) = -123.56
+>
+> which gave:
+> * -56.44
+> * -123.56
+>
+> then, solve with +360:deg:
+>
+> 8x = -56.44 + 360n
+> x = -7.06 + 45n
+>
+> 8x = -123.56 + 360n
+> x = -15.45 + 45n
+
+
+~~But, isnt that missing:~~
+
+> 180 - -56.44 = 236.44
+>
+> 8x = 236.44 + 360n
+> x = 29.555 + 45n
+
+NO! its NOT!
+(29.555 - 45n ~= -15.45)
+Either accounts for the other.
+Its just that they chose the one I didn't.
+
+
+Question 5
+==================================================
+
+W(t) is avg wind speed (km/h) in Jeff's town
+on the `t`-th day of the year.
+
+W(t) = -2sin(2pi/365(t-5.5)) + 14.8
+
+Consider 13 = W(t).
+What does the least-positive solution for that represent?
+
+Well,the first day of the year when avg wind speed is 13

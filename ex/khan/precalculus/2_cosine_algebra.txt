@@ -1,0 +1,147 @@
+Algebra and the cos function
+==================================================
+
+---
+
+INDEX
+* https://www.youtube.com/watch?v=JoOfBpdaAiw
+  * my initial approach:
+  * The approach used in the video:
+* https://www.youtube.com/watch?v=0_4uTKBI99o
+  * My Approach
+* algebra with `sin` too
+  * My Attempt
+
+---
+
+https://www.youtube.com/watch?v=JoOfBpdaAiw
+==================================================
+
+-6cos(8x) + 4 = 5
+
+my initial approach:
+--------------------------------------------------
+
+cos(8x) = -1/6
+x = arcos(-1/6) / 8
+
+
+The approach used in the video:
+--------------------------------------------------
+
+cos(8x) = -1/6
+
+n :ce: {ZZ}
+
+cos(8x + 2:pi:n) = -1/6
+BUT ALSO:
+cos(-8x + 2:pi:n) = -1/6
+
+
+cos(8x + 2:pi:n) = -1/6
+8x + 2:pi:n = arccos(-1/6)
+/      arccos(-1/6) - 2:pi:n
+: x = -----------------------
+\               8
+x = arccos(-1/6)/8 - :pi:n/4
+
+
+cos(-8x + 2:pi:n) = -1/6
+-8x + 2:pi:n = arccos(-1/6)
+/      arccos(-1/6) - 2:pi:n
+: x = -----------------------
+\             -8
+x = -arccos(-1/6)/8 + :pi:n/4
+
+
++/- x = arccos(-1/6)/8 - :pi:n/4
+
+
+https://www.youtube.com/watch?v=0_4uTKBI99o
+==================================================
+
+Building off of the above equations,
+can define all values of 'x' that are in [-pi/2, 0]?
+
+(He does trial & error with a table of `n` values.
+
+
+My Approach
+--------------------------------------------------
+
++/- x = arccos(-1/6)/8 - :pi:n/4
+
+x ~= +/- (0.22 - :pi:n/4)
+(approximation done in the video to simplify things)
+
++/- (0.22 - :pi:n/4) >= -pi/2
++/- (0.22 - :pi:n/4) <= 0
+
+---
+
+0.22 - :pi:n/4 >= -pi/2
+-:pi:n/4 >= -pi/2 - 0.22
+:pi:n/4 <= pi/2 + 0.22
+:pi:n <= 2pi + 0.88
+n <= 2 + 0.88/pi
+
+0.22 - :pi:n/4 <= 0
+-:pi:n/4 <= -0.22
+:pi:n/4 >= 0.22
+:pi:n >= 0.88
+n >= 0.88/pi
+
+---
+
+-0.22 + :pi:n/4 >= -pi/2
+:pi:n/4 >= -pi/2 - 0.22
+:pi:n >= -2pi + -0.88
+n >= -2 + -0.88/pi
+
+-0.22 + :pi:n/4 <= 0
+:pi:n/4 <= 0.22
+n <= 0.88/pi
+
+---
+
+for x = arccos(-1/6)/8 - :pi:n/4,
+if x >= -pi/2 & x <= 0,
+n <= 2 + 0.88/pi & n >= 0.88/pi
+
+for -x = arccos(-1/6)/8 - :pi:n/4,
+if x >= -pi/2 & x <= 0,
+n >= -2 + -0.88/pi & n < 0.88/pi
+
+n :ce: {Zintegers}
+
+
+algebra with `sin` too
+==================================================
+
+> https://www.youtube.com/watch?v=ES15mSuqHM8
+
+8sin(x/4) + 11 = 14
+
+
+My Attempt
+--------------------------------------------------
+
+sin(x/4) = 3/8
+
+x/4 + 2npi = arcsin(3/8)
+pi - x/4 + 2npi = arcsin(3/8)
+
+
+x/4 + 2npi = arcsin(3/8)
+/      arcsin(3/8) - 2npi
+: x = --------------------
+\               4
+x = arcsin(3/8)/4 - npi/2
+
+
+pi - x/4 + 2npi = arcsin(3/8)
+-x/4 + (2n + 1)pi = arcsin(3/8)
+/      arcsin(3/8) - (2n + 1)pi
+: x = --------------------------
+\               -4
+

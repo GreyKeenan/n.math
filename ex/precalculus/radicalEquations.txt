@@ -1,0 +1,94 @@
+
+https://youtu.be/cJIWxRf5jyA?feature=shared
+
+:VRAD:(2x + 1) + -:VRAD:(x - 1) = 1
+
+:VRAD:(2x + 1) = 1 + :VRAD:(x - 1)
+2x + 1 = (1 + :VRAD:(x - 1))^2
+= (1 + :VRAD:(x - 1))(1 + :VRAD:(x - 1))
+= (1 + :VRAD:(x - 1)) + (1 + :VRAD:(x - 1))(:VRAD:(x - 1))
+= 1 + :VRAD:(x - 1) + (:VRAD:(x - 1)) + (:VRAD:(x - 1))^2
+= 1 + 2:VRAD:(x - 1) + x + -1
+= 2:VRAD:(x - 1) + x
+x + 1 = 2:VRAD:(x - 1)
+(x + 1)/2 = :VRAD:(x - 1)        # NO
+((x+1)/2)^2 = x - 1
+
+# resume
+x + 1 = 2:VRAD:(x - 1)
+(x + 1)^2 = (2:VRAD:(x - 1))^2
+xx + 2x + 1 = 4(x - 1)
+xx + 2x + 1 = 4x - 4
+xx + 5 = 2x                     # NO
+5 = 2x - xx
+
+# resume
+xx + 2x + 1 = 4x - 4
+xx - 2x + 5 = 0
+x(x - 2) = -5
+
+# I dont remember how the quadratic formula works aaa
+	# revisited!
+
+xx - 2x + 5 = 0
+/      2 +[-] :VRAD:(4 - 4(5))
+:  x = -----------------------
+\               2
+/      2 +[-] :VRAD:(-16)
+:  x = -----------------------
+\               2
+/      2 +[-] 4i
+:  x = -----------------------
+\               2
+x = 1 +[-] 2i
+
+
+
+
+xx - 2x + 5 = 0
+x(x - 2) + 5 = 0
+
+
+==================================================
+
+
+simpleRadicalEquation:
+https://youtu.be/UBakzx7HhAo?feature=shared
+
+:VRAD:(2x + 1) - :VRAD:x = 1
+:VRAD:(2x + 1) = 1 + :VRAD:x
+2x + 1 = (1 + :VRAD:x)^2
+= 2:VRAD:x + (:VRAD:x)^2 + 1
+2x + 1 = 2:VRAD:x + x + 1
+x = 2:VRAD:x
+xx = (:VRAD:x + :VRAD:x)^2
+= 4(:VRAD:x)^2
+xx = 4x
+x = 4      # x CAN ALSO EQUAL 0, THOUGH, SO THIS IS WRONG
+           # I think because I divide by x above,
+           # it forces me to presuppose that x != 0
+
+xx = 4x
+xx - 4x = 0
+1xx + -4x + 0 = 0
+/      -(-4) +/- :VRAD:((-4)^2 - 4(1)(0))
+:  x = -------------------------------
+\                 2(1)
+/      4 +/- :VRAD:(16)
+:  x = -------------------------------
+\                 2
+/      4 +/- 4
+:  x = -------
+\         2
+
+x = (4 + 4)/2 = 4
+x = (4 - 4)/2 = 0
+
+x = 4 :VWEDGE: 0
+
+
+
+==================================================
+
+(3a)^2 = 9aa
+(2a)^2 = 4aa

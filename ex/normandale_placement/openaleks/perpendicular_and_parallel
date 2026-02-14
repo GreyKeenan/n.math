@@ -1,0 +1,75 @@
+finding perpendicular & parallel of a line
+==================================================
+
+ez
+
+---
+
+INDEX
+* Prob 1
+* prob 2
+
+---
+
+perp_slope = -1/slope
+solve for yintercept,
+using a point from original line which is intersection
+
+parallel_slope = slope
+solve using any point not on the original line
+
+extraneous cases:
+vertical & horizontal lines, self-evident
+
+
+y = mx + b    <- original line
+h = wo + p    <- perpendicular
+j = nk + d    <- parallel
+
+
+y = mx + b
+y - mx = b
+
+
+
+Prob 1
+==================================================
+
+y = -5/3 x - 7
+find perp and paral which pass through (-3, 3)
+
+
+~~o = 5/3~~
+p = 3 - (5/3)(-3) = 8
+h = 5/3 w + 8
+
+~~k = -3/5~~
+d = 3 - (-3/5)(-3) = 15/5 - 9/5 = 7/5
+j = -3/5 k + 7/5
+
+I copied over the slopes wrong. Fool.
+
+
+o = 3/5
+p = 3 - (3/5)(-3) = 3 + 9/5 = 24/5
+
+k = -5/3
+d = 3 - (-5/3)(-3) = -2
+
+( '-')b
+
+
+prob 2
+==================================================
+
+y = -6x + 9
+they pass though (3,3)
+
+
+o = 1/6
+p = 3 - 1/6(3) = 3 - 1/2 = 5/2
+
+k = -6
+d = 3 - -6(3) = 21
+
+( '-')b

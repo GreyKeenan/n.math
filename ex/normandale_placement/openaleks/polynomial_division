@@ -1,0 +1,257 @@
+Polynomial long division: Problem type 2
+==================================================
+
+---
+
+INDEX
+* Problem 0
+  * Their explanation
+* Problem 1
+* Problem 2
+* Problem 3
+* Problem 4
+* Problem 5
+
+---
+
+
+Problem 0
+==================================================
+
+(16x^3 - 16x^2 + 15x - 16)  /  (4x - 3)
+
+Give it in the form of a quotient and remainder.
+
+Hm. Is there a particular approach that I should use, then?
+
+---
+
+My instinct would be to either:
+
+* factor out the x-es maybe?
+* factor out the 16s?
+* split it into separate fractions?
+
+But I'm not sure how those would yield a quotient and remainder.
+It looks like the x cant be factored out of the rational?
+
+---
+
+Lets try splitting it up.
+
+ 16x^3 - 16x^2 + 15x - 16
+--------------------------
+         4x - 3
+
+ 16xxx      -16xx      15x        16
+-------- + -------- + -------- + --------
+ 4x - 3     4x - 3     4x - 3     4x - 3
+
+No, this doesn't help.
+
+---
+
+ 16x^3 - 16x^2 + 15x - 16
+--------------------------
+         4x - 3
+
+ 16(xxx - xx - 1) + 15x
+--------------------------
+         4x - 3
+
+again, dont think this helps?
+
+
+Their explanation
+--------------------------------------------------
+
+Oh dang this is an entire process/technique
+of hand-written devision that I haven't done before.
+
+Ohh, thats why its labelled specifically as "long division".
+
+I guess I should note this process down.
+It'll be in "nt/nomials.md" (I plan to change the file later though)
+
+
+This is going to be hard to notate in this format.
+
+
+
+Problem 1
+==================================================
+
+(12xxx + 22xx + 5x - 5)  /  (3x + 4)
+
+---
+
+divisor: (3x + 4)
+
+
+12xxx/3x = 4xx
+
+4xx(3x + 4) = 16xx + 12xxx
+
+(12xxx + 22xx + 5x - 5) - (12xxx + 16xx)
+
+quotient: 4xx
+expression: 6xx + 5x - 5
+
+
+6xx/3x = 2x
+
+2x(3x + 4) = 6xx + 8x
+
+(6xx + 5x - 5) - (6xx + 8x)
+
+quotient: 4xx + 2x
+expression: -3x - 5
+
+
+-3x/3x = -1
+-(3x + 4) = -3x - 4
+
+(-3x - 5)  -  (-3x - 4)
+
+quotient: 4xx + 2x - 1
+expression: -1
+
+DONE
+
+quotient: 4xx + 2x - 1
+remainder: -1
+
+(b'-')b
+
+
+Problem 2
+==================================================
+
+(6xxx - 17xx + 20x - 8)  /  (2xx - 3x)
+
+
+
+divisor: (2xx - 3x)
+
+
+6xxx/2xx = 3x
+
+3x(2xx - 3x) = 6xxx - 9xx
+
+(6xxx - 17xx + 20x - 8)  -  (6xxx - 9xx)
+
+quotient: 3x
+remainder: 8xx + 20x - 8
+
+
+8xx/2xx = 4
+
+4(2xx - 3x) = 8xx - 12x
+
+(8xx + 20x - 8) - (8xx - 12x)
+
+quotient: 3x + 4
+remainder: 8x - 8
+
+DONE  ---  WRONG
+
+Its *negative* 8xx/2xx
+
+
+quotient: 3x
+remainder: -8xx + 20x - 8
+
+-8xx/2xx = -4
+
+-4(2xx - 3x) = -8xx + 12x
+
+-8xx + 20x - 8) - (-8xx + 12x)
+
+quotient: 3x - 4
+remainder: 8x - 8
+
+DONE  ---  ( '-')b
+
+
+Problem 3
+==================================================
+
+(15xxx + 13xx - 21x - 21)  /  (5x + 6)
+
+
+15xxx/5x = 3xx
+3xx(5x + 6) = 15xxx + 18xx
+
+divisor: 5x + 6
+quotient: 3xx
+remainder: -5xx - 21x - 21
+
+
+-5xx/5x = -x
+-x(5x + 6) = -5xx + -6x
+
+quotient: 3xx - x
+remainder: 15x - 21
+
+
+15x/5x = 3
+3(5x + 6) = 15x + 18
+
+quotient: 3xx - x + 3
+remainder: -39
+
+DONE   ---   WRONG
+
+This is really difficult to keep straight & evaluate in this format.
+Should I do it on paper? Or try something else?
+
+         3xx   + -x   + -3
+       +-------------------------
+5x + 6 | 15xxx + 13xx - 21x - 21
+       -(15xxx + 18xx)
+       ---------------
+                 -5xx
+               -(-5xx - 6x)
+               ------------
+                       -15x
+                     -(-15x - 18)
+                     ------------
+                              -3
+
+Dang. I didn't carry a negative for the remainder. (fixed above)
+Using that other format helped though.
+
+
+Problem 4
+==================================================
+
+         4xx  + -4x   + 3
+       +-------------------------
+2x - 1 | 8xxx + -12xx + 10x + -8
+       -(8xxx + -4xx )
+       --------------
+                -8xx + 10x + -8
+              -(-8xx + 4x )
+              -------------
+                       6x + -8
+                     -(6x + -3)
+                     ----------
+                            -5          (b'-')b
+
+
+Problem 5
+==================================================
+
+           4x    + -2
+         +-----------------------
+4xx + 5x | 16xxx + 12xx + 2x + 9
+         -(16xxx + 20xx)
+         ---------------
+                   -8xx + 2x + 9
+                 -(-8xx + -10x)
+                 ---------------
+                          12x + 9     ( '-')b
+
+
+Cool. Using this paper-like format makes it a lot easier to keep straight.
+Also, making the negatives more noticeable is important for me idk.

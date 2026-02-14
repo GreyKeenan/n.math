@@ -1,0 +1,167 @@
+
+khan > precalc > unit 2, trig > unit test
+
+---
+
+INDEX
+* Question 2
+* Question 3
+* Question 4
+* Question 5
+* Question 10
+
+---
+
+
+Question 2
+==================================================
+
+/  tan(5/4pi) + tan(7/12pi)
+: ---------------------------
+\  1 - tan(5/4pi)tan(7/12pi)
+
+---
+
+ = tan(5/4pi + 7/12pi)
+
+5/4 + 7/12 = 22/12pi
+
+tan(22/12pi) = tan(10/12pi) = tan(5/6pi) = tan(-pi/6)
+ = -tan(pi/6)
+	sin(pi/6) / cos(pi/6)
+	(1/2) / (root3/2)
+	2/(2root3)
+	2root3/6
+	root3/3      <- aw crap I submitted this one. Impatient fool.
+= -root3/3
+
+
+Question 3
+==================================================
+
+Devora explored a secret cave.
+48m from the entrance, she found an empty chest with a map drawn on it.
+The map showed treasure buried 95m from the entrance to the cave.
+From the treasure, the map showed a 30degree angle between the chest and
+the entrance, as shown below.
+Devora faced the entrance, then turned a certain number of degrees to her left
+and walked until she got to the treasure.
+
+Supposing that the angle Devora turned is acute,
+how many degrees did Devora turn?
+(Do not round calcs, round final answer to nearest degree.)
+
+---
+
+points = entrance, chest-map, buried treasure = E, M, T
+
+a = E->M = 48
+b = E->T = 95
+A = :angle:ETM = 30:deg:
+B = :angle:EMT = ? (acute)
+
+
+asinB = bsinA
+48sinB = 95sin30
+sinB = 95sin30/48
+sinB = 95(1/2)/48
+sinB = 95/96
+
+B = asin(95/96)
+B = 81.7228709294
+<~passes check>
+
+180 - B = asin(95/96)
+<other one was acute>
+
+
+Question 4
+==================================================
+
+16cos(8x) - 2 = 6
+
+(radians)
+
+---
+
+cos(8x) = 1/2
+
++/- 8x + n2pi = pi/3
+
+8x + n2pi = pi/3
+8x = pi/3 + n2pi
+x = pi/24 + npi/4
+
++/- x = pi/24 + npi/4
+
+
+Question 5
+==================================================
+
+3.5 = -5cos(t2pi) + 5
+
+find the lowest solution > 0.
+
+---
+
+1.5/5 = cos(t2pi)
+3/10 = cos(t2pi)
+
++/- t2pi + n2pi = arccos(3/10) = Y
+
+t2pi = Y + n2pi
+t = Y/(2pi) + n
+t = 72.5423968763/(2pi) + n
+t = 11.5454810466 + n
+
+  ~~11.54... checks out, but that - 11 does not.~~
+
+~~Hang on, cos(t2pi) should always be equal to cos(0).~~
+No. Thats only if 't' is an integer.
+
+-5cos((11.5454810466)2pi) + 5
+
+FUCK I ENTERED DEGREES INSTEAD OF RADIANS IN THE CALC
+
+acos(3/10) != 72...A
+acos(3/10) = 1.2661...
+
+why ... why did 11.54 work though?
+OH
+because I was checking it in degrees, too.
+( -_-)p
+
+fork me.
+
+> I'm actually making a lot of dumb, tired, and rushed mistakes rn.
+
+
+Question 10
+==================================================
+
+17 = 12sin(t2pi/24) + 15
+
+find the second-lowest solution > 0
+
+---
+
+sin(t2pi/24) = 1/6
+
+t2pi/24 + n2pi = 1/6
+pi - t2pi/24 + n2pi = 1/6
+
+t2pi/24 = 1/6 + n2pi
+t2pi = 4 + 24n2pi
+t = 2/pi + 24n
+t = 0.6366197724 + 24pi
+<~checks out>
+
+pi - t2pi/24 + n2pi = 1/6
+-t2pi/24 = 1/6 - pi + n2pi
+t2pi/24 = -1/6 + pi + n2pi
+t2pi = -4 + 24pi + 24n2pi
+t = -2/pi + 12 + 24n
+t = 11.3633802276 + 24n
+<~checks out>
+
+

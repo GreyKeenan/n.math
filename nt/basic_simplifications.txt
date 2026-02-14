@@ -1,0 +1,31 @@
+
+a + (b + c) = (a + b) + c
+a - b = a + -b
+
+2a = a + a
+a(bc) = (ab)c
+a(b + c) = ab + ac
+
+a = a/1
+/   a     ac
+:  --- = ----
+\   b     bc
+/   a     c     ad     cb     ad + cb
+:  --- + --- = ---- + ---- = ---------
+\   b     d     bd     bd       bd
+(a/b = c/d) = (ad = bc)
+
+a^2 = aa
+a^(b + c) = a^b * a^c
+
+(ab)^c = (a^c)(b^c)
+
+(:vT:^a(b) = c) == (c^a = b)
+
+
+b < 0; |a| = b		# no solution
+	# with '>' or '!=', may be (inf, inf) as solution
+b >= 0; (|a| = b) = (+/- a = b)
+(|a| = |b|) = (a = +/- b)
+
+-(a > b) = (-a < -b)

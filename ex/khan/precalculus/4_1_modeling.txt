@@ -1,0 +1,198 @@
+Modeling with rationals
+==================================================
+
+---
+
+INDEX
+* pet store
+* combining mixtures
+* Combined rates (1)
+* Combined rates (2)
+
+---
+
+
+pet store
+==================================================
+
+https://www.youtube.com/watch?v=glEP04Pzap8
+https://www.youtube.com/watch?v=mpHMuaVW0DI
+
+a > b > c
+
+c / (a+b+c) ?= 1/3
+
+c / (a+b+c) is the fraction of 'c'-es in abc.
+it must be less than 1/3,
+ecause there are 2 other sections which are larger.
+
+
+Okay, so we can know that intuitively,
+but how can we prove it?
+
+1/3 -> 1c/3c -> c/(c + c + c)
+
+c / (a+b+c) ?= c/(c+c+c)
+
+isolate (a+b) and (c+c)
+(a+b) > (c+c)
+so:
+c/(a+b+c) < c/(c+c+c)
+c/(a+b+c) < 1/3
+
+
+combining mixtures
+==================================================
+
+https://www.youtube.com/watch?v=xMADEddxSEo
+
+30L gas in tank.
+it has 18% ethanol.
+have other gas with 25% ethanol.
+how many litres of other gas would you need to add
+to get the 18%-tank up to 20%?
+
+---
+
+my instinct would be
+
+30 * 0.18 = 5.4
+          = 24.6
+
+25:75 -> 1:3
+
+5.4 + 1x = a
+24.6 + 3x = b
+
+a/(a+b) = 1/5
+
+set upper eqs equal to x,
+solve for a or b with them,
+solve for it with the lower eq.
+This isnt the thought process they are teaching though.
+
+---
+
+the video's approach:
+
+volume_ethanol/volume_total
+5.4/30 = the concentration in the tank
+
+new_volume_ethanol/new_total = 20%
+20/100
+
+/  5.4 + x     1
+: --------- = ---
+\  30 + 4x     5
+
+~~So, this is ultimately the same as my approach above,~~
+but its way more organized to think of it the way the video is saying.
+(ofc, thinking about it in those terms is the point)
+
+Lets solve it.
+
+5(5.4 + x) = 30 + 4x
+27 + 5x = 30 + 4x
+~~x = 3~~
+	x = 12
+
+> there IS a bit of a difference.
+  I put x/(4x), but the video put 0.25x/x.
+  My final result was only 3 instead of 12, then.
+  Of course.
+  The denominator represents the total volume.
+  If I'm adding 4x on the bottom, thats adding 4L
+  to the total volume at once.
+  It needs to be 0.25x/x to be accurate,
+  or accounted for afterwards.
+
+
+Combined rates (1)
+==================================================
+
+https://www.youtube.com/watch?v=gD7A1LA4jO8
+
+Ian can rake lawn in 5hrs. Kyandre can do it in 3.
+Working together, how long does it take?
+
+(disregarding real teamwork issues/benefits)
+
+---
+
+my instinct:
+
+ian rakes at 1lawn/5hr
+kyandre rakes at 1lawn/3hr
+
+1/5 + 1/3 = 8/15
+
+15/8 = 1.875
+
+together they rake 1lawn in 1.875hrs
+
+---
+
+(video approach is the same)
+
+
+Combined rates (2)
+==================================================
+
+https://www.youtube.com/watch?v=E1j8W64NQ0Y
+
+Together, Anya and Bill stained deck in 8hrs.
+Each alone, Anya stained it twice as fast as Bill.
+How long did each of them take alone?
+
+---
+
+my instinct
+
+anya_alone/bill_alone = 1/2
+anya_alone + bill_alone = 8
+
+a/b = 1/2
+a + b = 8
+
+a = b/2
+a = 8 - b
+
+b/2 = 8 - b
+b = 16 - 2b
+3b = 16
+b = 16/3
+
+a = 8 - 16/3
+a = 24/3 - 16/3
+a = 8/3
+
+a ~ 2.666...
+b ~ 5.333...
+
+*is* an answer for the model I set up,
+but each should be > 8hrs alone.
+The model is wrong. Let's look at the vid.
+
+---
+
+the video:
+
+1/8 = 1/a + 1/b
+
+b = 2a
+
+1/8 = 1/a + 1/(2a)
+a = 8 + 4
+a = 12
+
+b = 24
+
+---
+
+so, what did I do wrong?
+
+Well, (a + b = 8) is not the same as (1/a + 1/b = 1/8).
+Think about it.
+the number of hours it took each of them alone
+shouldnt add up to the number of hours it took them together.
+I needed to add the *rates*, not the *times*.
