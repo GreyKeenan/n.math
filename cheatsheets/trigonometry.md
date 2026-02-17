@@ -157,7 +157,7 @@ Antiderivatives (`+C` omitted)
 	S(secx)dx = ln|secx + tanx|
 
 	S(cotx)dx = -ln|cscx| = ln|sinx|
-	S(cscx)dx = -ln|cscx + tanx|
+	S(cscx)dx = -ln|cscx + cotx| = ln|cscx - cotx|
 
 	Use IBP for inverse functions.
 
