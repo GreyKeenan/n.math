@@ -68,6 +68,11 @@ that people may or may not use:
 	af/ax = f_x = f_x' = f_1 = D[x]f = D[1]f = a[x]f
 	af/ay = f_y = f_y' = f_2 = D[y]f = D[2]f = a[y]f
 
+***Please*** note that, though our notation for partial derivatives
+is similar to a ratio-of-differentials as full-derivatives are,
+`ax` is *not* a differential itself,
+and does not necessarily share all properties of actual differentials.
+
 
 Higher-Order Partials, Clairaut's Theorem
 ========================================
