@@ -6,14 +6,19 @@ Vectors
 <!-- INDEX -->
 * Vectors as a concept
 * Representing vectors numerically
-* Operations Involving Vectors
+* Basic Operations
   * Multiplying a vector by a scalar
   * Addition/Subtraction and Vectors
+  * Returning to ihat, jhat, and khat
+* Special Products
   * The Dot Product
   * The Cross Product
-  * Hadamard Product or Element-Wise Product
-* Returning to ihat, jhat, and khat
-* Projections
+    * The Magnitude of the Cross Product
+    * The Direction of the Cross Product
+    * The Cross Product as a Determinant
+  * Relating the Dot and Cross Products
+  * The Hadamard or Element-Wise Product
+* Unit Vectors
 * Introducing Vector Functions
   * Vector Fields
   * Parametric Equations
@@ -21,6 +26,13 @@ Vectors
 * Summary
 
 <br>
+
+
+Prerequisites:
+
+* functions
+* parametric equations
+* trigonometry
 
 
 Vectors as a concept
@@ -131,7 +143,7 @@ represents the vectors' magnitude.
 This convention is especially common in physics.
 
 
-Operations Involving Vectors
+Basic Operations
 ========================================
 
 Multiplying a vector by a scalar
@@ -187,97 +199,8 @@ Like terms combine, and the addition results in an output vector.
 (TODO: what subbing vectors means graphically)
 
 
-The Dot Product
-----------------------------------------
-
-There are a few ways that we can try to multiply a vector by another vector.
-The first we will look at is the dot product.
-
-	let * be the :dot: symbol
-
-	v = < a, b, c >
-	u = < d, e, f >
-
-	v * u = ad + be + cf
-	v * u = |v||u|cos(angleBetween)
-
-Notice that the dot product takes two vectors as input and outputs a scalar.
-
-Graphically, the dot product corresponds to
-how much two vectors *agree* on which direction they are pointing in.
-As such, the dot product of two perpendicular vectors is always zero.
-
-
-The Cross Product
-----------------------------------------
-
-The cross product is a little weirder:
-
-	let :x: be the :cross: symbol
-
-	v = < a, b, c >
-	u = < d, e, f >
-
-	v :x: u = < bf - ec, dc - af, ae - db >
-	|v :x: u| = |v||u|sin(angleBetween)
-
-Notice that the cross product
-takes two vectors as input and outputs another vector.
-Notice, also, that the cross product is not commutative.
-`v` and `u`, when switched around,
-result in the negative of the previous cross-product.
-
-Let's consider the cross product's graphical properties.
-If `v :x: u = w`:
-
-1. `w` will be perpendicular to both `u` and `v`.
-2. `w` will be `<0,0,0>` if `u` and `v` are collinear.
-3. `|w|` is the area of the parallellogram given by `u` and `v`.
-
-Let's think about that first property for a second.
-Consider that in a 3d space,
-for two intersecting lines which aren't collinear,
-there exists some third line which is perpendicular to the other two.
-Now, if the first two lines were vectors,
-that would mean that there are two possible output vectors,
-each the others' negative.
-So, how do we know which one is which?
-
-There is a convention for this:
-`u` and `v` are always in some 2d plane
-(not necessarily the xy plane, just some 2d plane).
-Let's say they are not collinear, and we are looking down at the plane.
-Let `v :x: u = w`.
-Lets say that,
-if we were to encircle the origin in a counter-clockwise direction,
-we would first encounter `v` and then later `u`.
-Then, if `|w| > 0`, `w` will point up out of the plane towards us.
-
-(TODO: right-hand rule)
-
----
-
-The cross product is derived from the determinant of this matrix:
-
-	|[
-	  I, J, K,
-	  a, b, c,
-	  d, e, f
-	]| = v :x: u
-
-
-Hadamard Product or Element-Wise Product
-----------------------------------------
-
-The Hadamard product is perhaps the most intuitive
-product between two vectors:
-
-	TODO
-	< a, b, c > HadamardProd < d, e, f > = < ad, be, cf >
-
-
 Returning to ihat, jhat, and khat
-========================================
+----------------------------------------
 
 Now, we have the tools we need to understand vector notation.
 `ihat`, `jhat`, and `khat` are just constants:
@@ -296,13 +219,178 @@ we are saying:
 	= <a,0,0> + <0,b,0> + <0,0,c>
 	= < a, b, c >
 
-Tada!
 
 
-Projections
+Special Products
 ========================================
 
-	TODO
+There are a handful of different ways to multiply two vectors together.
+
+
+The Dot Product
+----------------------------------------
+
+The dot product is given as:
+
+	let * be the :dot: symbol
+
+	v = < a, b, c >
+	u = < d, e, f >
+
+	v * u = ad + be + cf = |v||u|cos(angleBetween)
+
+> Notice that the dot product takes two vectors as input and outputs a scalar.
+
+**But what *is* the dot product?**
+
+The dot product measures the degree to which
+two vectors are pointing in the same direction.
+Let's say we have two vectors, `v = aI` and `u = bI`.
+`u` and `v` are collinear; they are entirely pointing in the same direction.
+So, their dot product will be `|v||u|cos(0) = |v||u| = ab`.
+`ab` is how much, collectively, they point in the `ihat` direction.
+Alternatively, consider `w = cJ`.
+`v` and `w` are perpendicular; they have no shared directionality.
+So, their dot product is `|v||w|cos(pi/2) = 0`.
+Zero is how much, collectively, they point in any direction.
+They don't agree at all.
+
+Let's consider the presence of cosine in the dot product.
+`|u|cos(angleBetween)` gives us the length of `u` *along `v`*.
+(You should know your trig!)
+So, `|u|cos(angleBetween)` times `|v|` is the extent to which they agree.
+(Of course, switching around `u` and `v`, this is equivalent.)
+
+Notice, then, that the dot product's absolute value
+is never greater than the product of the two vectors' magnitudes.
+
+
+The Cross Product
+----------------------------------------
+
+The ross product is given as:
+
+	let :x: be the :cross: symbol
+
+	v = < a, b, c >
+	u = < d, e, f >
+
+	v :x: u = < bf - ec, dc - af, ae - db >
+	|v :x: u| = |v||u|sin(angleBetween)
+
+> Notice that the cross product
+  takes two vectors as input and outputs another vector.
+  Notice, also, that the cross product is not commutative.
+  `v` and `u`, when switched around,
+  result in the negative of the previous cross-product.
+
+**But what *is* the cross product?**
+Since it's a vector, it will be useful to answer that question
+both in terms of its magnitude and in terms of its direction.
+
+
+### The Magnitude of the Cross Product
+
+First, let's think about just the magnitude of the cross product.
+Where the dot product represents how much two vectors agree,
+the cross product essentially measures how much two vectors *disagree*,
+or how much two vectors point in opposite directions.
+Let's say we have two vectors, `v = aI` and `u = bJ`.
+They are perpendicular, and so (the magnitude of) their cross product is
+`|u||v|sin(pi/2) = |u||v| = ab`.
+They are pointing entirely in opposite directions,
+and so they disagree 100%, or by `ab`.
+Alternatively, consider `w = cI`.
+`v` and `w` are collinear; they agree entirely.
+So, their cross product is `|v||w|sin(0) = 0`.
+
+This is because, instead of `cos`,
+the cross product's magnitude is given with `sin`.
+`|u|sin(angleBetween)` gives us the amount of `u`
+which is *perpendicular* to `v`.
+(You should know your trig!)
+So, `|u|sin(angleBetween)` times `|v|` is the extent to which they disagree.
+(Of course, switching around `u` and `v`, this is equivalent.)
+
+Now, consider once again our `v = aI`, `u = bJ`, `|cross| = ab` example.
+Here, we can see how the magnitude of the cross product
+is *also* the area formed between the perpendicular parts of `u` and `v`.
+That is to say, its the area of the parallellogram given by `u` and `v`.
+
+
+### The Direction of the Cross Product
+
+The cross product is a vector, though.
+If the cross product measures diagreement between two vectors,
+where should its vector point?
+If it pointed along either of them, that wouldn't really make sense, would it?
+Instead, the cross product vector
+*is always perpendicular to both of the input vectors*.
+
+Consider that, in 3d space, for any two lines,
+there is exactly one other line which
+forms a 90 degree angle with both of them.
+The cross product of two vectors will point along that line.
+By the way, this is why the true cross product *only exists* in 3d space
+(and 7d space, don't ask idk yet TODO).
+
+TODO: RHR
+
+
+### The Cross Product as a Determinant
+
+The cross product is derived from the determinant of this matrix:
+
+	|[
+	  I, J, K,
+	  a, b, c,
+	  d, e, f
+	]| = v :x: u
+
+TODO
+
+
+Relating the Dot and Cross Products
+----------------------------------------
+
+So, the dot product is how much two vectors agree,
+and the magnitude of the cross product is how much they disagree.
+It would follow, then, that there exists some relationship
+between the two, since they are opposing ideas.
+Indeed, we can say:
+
+	let u and v be vectors
+	let m = |u||v|
+	let t = angleBetween
+
+	dot = D = mcost
+	cross = C = msint
+
+	DD + CC = (mm)(cos^2(t) + sin^2(t)) = mm(1)
+	=> DD + CC = mm
+	=> |u:x:v|^2 + (u*v)^2 = (|u||v|)^2
+
+Neat!
+
+
+Hadamard Product or Element-Wise Product
+----------------------------------------
+
+The Hadamard product is given as:
+
+	v = <a, b, c>
+	u = <d, e, f>
+
+	v hadamardProduct u = <ad, be, cf>
+
+TODO: why?
+
+
+Unit Vectors
+========================================
+
+TODO: explain
+TODO: projections & components
 
 
 Introducing Vector Functions
@@ -409,5 +497,18 @@ Consider that, for a vector function, its magnitude is also a function:
 Summary
 ========================================
 
-TODO
+* Vectors have a direction and magnitude.
+* We denote them using vector notation or angled brackets.
+* Multiplying a vector and a scalar changes the magnitude.
+* Adding vectors together changes the direction and magnitude.
+* The dot product is how much vectors agree.
+* The cross product is how much vectors disagree.
+* Vector Functions output a vector
+  * Vector fields associate a vector with a point.
+  * Parametrically, they describe space.
 
+TODO:
+
+* unit vectors
+* projections
+* algebraic properties of dot/cross?

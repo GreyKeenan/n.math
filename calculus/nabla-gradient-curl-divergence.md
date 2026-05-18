@@ -4,10 +4,10 @@ The Nabla, Gradient, Curl, and Divergence
 <br>
 
 <!-- INDEX -->
-* The Nabla
-* The Gradient of a Scalar Function
-* The Divergence of a Vector Function
-* The Curl of a Vector Function
+* The Nabla Operator
+* Gradient
+* Divergence
+* Curl
 
 <br>
 
@@ -18,13 +18,13 @@ Prerequisites: (TODO links)
 * partial derivatives
 
 
-The Nabla
+The Nabla Operator
 ========================================
 
 The "nabla" symbol is an upside-down triangle,
 or more specifically, an upside-down capital delta.
 (For our purposes, `A` will be used as the nabla symbol.)
-The NABLA operator is used to describe gradient, curl, and divergence.
+The NABLA operator is used to notate gradient, curl, and divergence.
 But first, let's get a sense of what the operator is.
 
 Using notation loosely, we think of the nabla operator as a vector:
@@ -44,35 +44,40 @@ makes it easier to remember why the NABLA operator works the way it does.
 Now, let's see how we use it.
 
 
-The Gradient of a Scalar Function
+Gradient
 ========================================
 
-We define the "gradient" of a scalar function `f` to be:
+The gradient of a scalar-function `f` is given by:
 
-	(NABLA)f = Af = < af/ax, af/ay, af/az, ... >
+	gradient(f) = NABLAf = Af
+	Af = < af/ax, af/ay, af/az, ... >
 
 So, the gradient of a scalar function
 will itself be a vector function,
 and we cannot take the gradient of a vector function.
 
-(TODO: conceptually)
 
-
-The Divergence of a Vector Function
+Divergence
 ========================================
 
+The divergence of a vector field `F` is given by:
+
 	F = < P, Q, R >
-	divergence = A*F = aP/ax + aQ/ay + aR/az
+	divergence(F) = NABLA*F = A*F
+	A*F = aP/ax + aQ/ay + aR/az
 
 TODO: explain
 TODO: conceptually / incompressibility
 
 
-The Curl of a Vector Function
+Curl
 ========================================
 
+The curl of a vector field `F` is given by:
+
 	F = < P, Q, R >
-	curl = A:x:F = < R_y - Q_z, P_z - R_x, Q_x - P_y >
+	curl(F) = NABLA:x:F = A:x:F
+	A:x:F = < aR/ay - aQ/az, aP/az - aR/ax, aQ/ax - aP/ay >
 
 TODO: explain
 TODO: conceptually / tendency to rotate around that point
