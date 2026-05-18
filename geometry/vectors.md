@@ -6,7 +6,7 @@ Vectors
 <!-- INDEX -->
 * Vectors as a concept
 * Representing vectors numerically
-* Basic operations involving vectors
+* Operations Involving Vectors
   * Multiplying a vector by a scalar
   * Addition/Subtraction and Vectors
   * The Dot Product
@@ -22,10 +22,16 @@ Vectors
 Vectors as a concept
 ========================================
 
-Generally, we work with individual numbers.
-They encode a single value and are called "scalars".
+Up until learning about vectors,
+we are generally used to working with individual numbers.
+Some variable `x`, for instance,
+usually represents some specific number.
+We will introduce the term "scalar"
+to describe some mathmatical concept which corresponds to a single number.
+So, every natural number is a scalar, as is every real number.
+If `x = 10`, x is a scalar.
 
-"Vectors" are another type of value we can encode.
+"Vectors" are not scalars; they are another type of value we can encode.
 Fundamentally, rather than having a single value,
 a vector has two parts: a *magnitude* (or length) and a *direction*.
 Together, we conceptualize vectors as a line (arrow)
@@ -59,10 +65,9 @@ Representing vectors numerically
 
 There are a few ways we can represent vectors numerically.
 
-First, consider the most direct: a length and an angle.
+First, consider the most direct: a length and some angle(s).
 A radius and a direction.
-This is, in fact, the same as polar coordinates,
-or spherical coordinates in 2d.
+This is, in fact, the same as polar coordinates, or spherical coordinates in 3d.
 The formulas are shared, naturally.
 
 Alternatively, it is often useful to describe vectors as
@@ -73,14 +78,18 @@ Or in 3d, the vector `<-1, -1, -1>` would have a length of `root3`
 and be pointing into the middle of the octant where x, y, and z are negative.
 So forth for higher dimensions.
 
-Notice that we use angled brackets (`< ... >`) to differentiate
+When describing a vector by x, y, and z axes like this,
+each respective value is called a "component".
+Also, notice that we use angled brackets (`< ... >`) to differentiate
 a vector from just any old regular point in space.
 
 If we think of a vector as a point like this,
 consider that the *length* of the vector
-is just that point's distance from the origin.
+is just that point's distance from the origin:
 
-Finally, note that there is another notation convention
+	magnitude = distance = root( xx + yy + zz + ... )
+
+There is another notation convention
 used to describe vectors in this way.
 It is called "vector notation".
 We use the `ihat`, `jhat`, and `khat` symbols
@@ -96,7 +105,7 @@ We use the `ihat`, `jhat`, and `khat` symbols
 There is a very clever reason we do this,
 and you can essentially think of ihat, jhat, and khat
 as variables to be moved around.
-I'll explain after we lay some other groundwork.
+I'll explain later after we lay some other groundwork.
 
 There are two other things to note about notating vectors.
 
@@ -115,10 +124,10 @@ represents the vectors' magnitude.
 	if v^[->] = < a, b, c >
 	then v = |v|
 
-This convention is especially used in physics.
+This convention is especially common in physics.
 
 
-Basic operations involving vectors
+Operations Involving Vectors
 ========================================
 
 Multiplying a vector by a scalar
@@ -138,6 +147,9 @@ Let's see that numerically:
 	|v| = root( aa + bb + cc )
 	|nv| = root( nnaa + nnbb + nncc ) = n|v|
 
+Consider that multiplying a vector by `-1`
+merely flips the direction in which it is pointing by 180 degrees.
+
 
 Addition/Subtraction and Vectors
 ----------------------------------------
@@ -151,8 +163,11 @@ What would it mean to add a scalar to a vector?
 If we only had 3 dimensions to the space, what would a fourth value represent?
 In most contexts, nothing at all.
 It's generally an undefined operation.
+*Some* conventions say that you should add `10` to `a`, `b`, and `c`,
+particularly in computer science contexts,
+but that isn't strictly kosher.
 
-We couldn't add a scalar and a vector,
+So, we couldn't add a scalar and a vector,
 but consider that we *can* add two vectors:
 
 	v = aI + bJ + cK
@@ -204,12 +219,9 @@ The cross product is a little weirder:
 
 Notice that the cross product
 takes two vectors as input and outputs another vector.
-
 Notice, also, that the cross product is not commutative.
 `v` and `u`, when switched around,
 result in the negative of the previous cross-product.
-
-The cross product only exists for 3d vectors.
 
 Let's consider the cross product's graphical properties.
 If `v :x: u = w`:
@@ -226,11 +238,11 @@ Now, if the first two lines were vectors,
 that would mean that there are two possible output vectors,
 each the others' negative.
 So, how do we know which one is which?
-There is a convention for this.
 
-`u` and `v` are in some 2d plane, necessarily.
-They are not collinear.
-We are looking down at the plane.
+There is a convention for this:
+`u` and `v` are always in some 2d plane
+(not necessarily the xy plane, just some 2d plane).
+Let's say they are not collinear, and we are looking down at the plane.
 Let `v :x: u = w`.
 Lets say that,
 if we were to encircle the origin in a counter-clockwise direction,
@@ -318,9 +330,17 @@ And so forth for volumes, etc.
 
 > `f(r,t) = <rcost, rsint, r>` describes a cone, for example.
 
-The advantage of vector functions, however,
-is like that of parametric equations.
+The advantage of vector functions is like that of parametric equations.
 A perfectly-vertical portion of a parametric-surface, for instance,
 doesn't break in certain contexts where a straightforward
 function-of-two-variables might. (TODO better explanation)
+
+Further, consider that the magnitude of a vector function
+tells us the magnitude of the vector that we would get for that `t`.
+That is to say, the magnitude of a vector function of `t`
+is also a function of `t`,
+and the magnitude at `t0` corresponds to output of the function at `t0`.
+
+	v = f(t) = < t, tt, ttt>
+	|v| = root( tt + tttt + tttttt ) = t*root(1 + tt + tttt)
 
