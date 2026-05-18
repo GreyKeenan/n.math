@@ -77,11 +77,12 @@ Multiline things are often denoted with big parentheses:
 `sqrt` and `sqrt[n]` may be used as well.
 
 `xV` is often used as an equivalent to `x^[->]` to indicate a vector. \
-`*` usually refers to the dot product, not the cross product.
+`*` usually refers to the dot product, not the cross product. \
+`:x:` often differentiates the cross product from the variable `x`.
 
-`S` is often used in place of `INT` or the long-S integral symbol. \
-`Z` is often used in place of `SUM` or `SIGMA`. \
-`TT` is often used in place of `PRODUCT` or `PI`. \
-`a` is sometimes used for `del`. \
+`S` is often used in place of `INT` aka the long-S integral symbol. \
+`Z` is often used in place of `SUM` aka `SIGMA`. \
+`TT` is often used in place of `PRODUCT` aka `PI`. \
+`a` is sometimes used for `partial`. \
 `N` is sometimes used for `NABLA`.
 

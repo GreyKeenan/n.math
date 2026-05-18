@@ -14,7 +14,11 @@ Vectors
   * Hadamard Product or Element-Wise Product
 * Returning to ihat, jhat, and khat
 * Projections
-* Vector Functions
+* Introducing Vector Functions
+  * Vector Fields
+  * Parametric Equations
+  * A note about a vector-function's magnitudes
+* Summary
 
 <br>
 
@@ -301,46 +305,109 @@ Projections
 	TODO
 
 
-Vector Functions
+Introducing Vector Functions
 ========================================
 
-Consider that a function can output a vector.
-Here is a simple one:
+A "vector function" is a function whose output is a vector.
+For example:
 
-	f(t) = <t, tt, ttt>
+	if   f(t) = < t, tt, ttt >
+	then f(1) = < 1, 1, 1 >
+	and  f(2) = 2I + 4J + 8K
+	and  f(3) = < 3, 9, 27 >
+	...
 
-Oh, would you look at that.
-It's a parametric equation!
-What we've said up there is equivalent to:
+That's all a vector function is at its core, but *in practice*,
+there are two main ways we conceptualize vector functions.
 
-	<t, tt, ttt>  <=>  {
-	  x = t
-	  y = tt
-	  z = ttt
-	}
 
-So, rightly, we often manipulate vector functions and reason using them
-in much the same way that you would with any parametric equations.
+Vector Fields
+--------------------------------------
 
-A vector-function with a single input-variable will describe a line,
-much like a function of a single variable.
-A vector-function with two input-variables will describ a surface,
-much like a function of two variables.
-And so forth for volumes, etc.
+First, we can think of a function as a "vector field".
+Imagine some vector-function `F` of two variables:
 
-> `f(r,t) = <rcost, rsint, r>` describes a cone, for example.
+	F(s,t) = < st, t/s, ttt >
 
-The advantage of vector functions is like that of parametric equations.
-A perfectly-vertical portion of a parametric-surface, for instance,
-doesn't break in certain contexts where a straightforward
-function-of-two-variables might. (TODO better explanation)
+If we were to say that `s = x` and `t = y` ...
 
-Further, consider that the magnitude of a vector function
-tells us the magnitude of the vector that we would get for that `t`.
-That is to say, the magnitude of a vector function of `t`
-is also a function of `t`,
-and the magnitude at `t0` corresponds to output of the function at `t0`.
+	let s = x
+	let t = y
+	=> F(s,t) = F(x,y) = < xy, y/x, yyy >
 
-	v = f(t) = < t, tt, ttt>
-	|v| = root( tt + tttt + tttttt ) = t*root(1 + tt + tttt)
+... then we would have a function F which
+gives us a vector corresponding to any particular point in space!
+And that's what a vector field is.
+For whatever dimensionality we're working in,
+we can give the function some point in n-space as input,
+and get a corresponding vector as output.
+
+
+Parametric Equations
+----------------------------------------
+
+Alternatively, we can use vector-functions *just like* parametric equations
+to define some curve, surface, volume, etc.
+
+For example, take the line `y = x + 1`.
+Now, consider the 2d-vector-function:
+
+	v  =  <0, 1> + t<1, 1>  =  <t, t + 1>
+
+As t goes between `-inf` and `+inf`,
+the resulting vectors will trace along a continuous path.
+Specifically, they'll trace along the line `y = x + 1`.
+So, the graph of our vector function is that line,
+or we're using a vector function to describe that line.
+
+Notice how this is the same as parametric equations:
+
+	<t, t + 1>   :implies:   x = t, y = t + 1
+
+If we were to solve and graph that trivial set of parametric equations,
+what would we have?
+We'd have `y = x + 1`.
+So, just as we use parametric equations to describe
+a continuous set of points in terms other than the axes,
+we can use vector functions to do the same thing.
+
+Further, in the same way that parametric equations of two parametric-variables
+can describe surfaces, or three can describe volumes,
+we can have vector functions of multiple variables which
+describe n-space shapes.
+For example, the following vector-function describes a cone:
+
+	v = < rcos(t), rsin(t), r >
+
+Or, parametrically:
+
+	x = rcost
+	y = rsint
+	z = r
+
+Here are some other examples:
+
+	v(t,z) = < 3cost, 3sint, z >             a cylinder-shell w/ radius 3
+	v(s,t) = <1,1,3> + s<6,0,1> + t<1,1,0>   an plane through (1,1,3)
+	v(r,t,z) = <rcost, rsint, z>, r:in:[0,7] a cylinder-volume w/ radius 7
+	v(t) = <t, cost, sint>             a spiral extending along the x axis
+
+
+A note about a vector-function's magnitudes
+----------------------------------------
+
+Consider that, for a vector function, its magnitude is also a function:
+
+	v(t) = < sin(t), cos(t), t >
+	magnitude = m(t) = root( 1 + tt )
+
+... where:
+
+	|v(A)| = m(A)
+
+
+Summary
+========================================
+
+TODO
 

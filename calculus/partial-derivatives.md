@@ -13,6 +13,11 @@ Partial Derivatives
 <br>
 
 
+Prerequisites: (TODO links)
+
+* single-variable calculus
+
+
 Introduction to Partial Derivatives
 ========================================
 
@@ -30,6 +35,10 @@ That's where partial derivatives come in.
 Essentially, we just take the derivative of the function
 with respect to a specific variable
 and treat the other variable as though it is a constant.
+
+> TODO: explain what partial derivatives are in concept, not just symbolically
+  A change with respect to just one of the variables.
+  The change along the x or y axis.
 
 Observe:
 
