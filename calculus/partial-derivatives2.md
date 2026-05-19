@@ -35,8 +35,9 @@ That's where partial derivatives come in.
 Notation
 ========================================
 
-	let a be partial
+	let a be the "partial" symbol
 	af/ax
+
 	f_x, f_xx
 	f'_x
 	D[x]f
@@ -47,6 +48,51 @@ Higher-Order Partials and Clairaut's Theorem
 ========================================
 
 	f[xy] = f[yx]
+
+Higher-order partial derivatives behave as you'd expect
+if you're familiar with higher-order regular derivatives.
+
+	f = xxxyy + xxy
+
+	f[x] = 3xxyy + 2xy
+	f[xx] = 6xyy + 2y
+	f[xxx] = 6yy
+	f[xxxx] = 0
+	
+	f[y] = 2xxxy + xx
+	f[yy] = 2xxx
+	f[yyy] = 0
+
+The difference, however,
+is that we can mix-and-match our partial derivatives:
+
+	f[x] = 3xxyy + 2xy
+	f[xy] = 6xxy + 2x
+
+	f[yy] = 2xxx
+	f[yyx] = 6xx
+
+"Clairaut's Theorem" states that
+partial derivatives will be identical,
+as long as differentiation occurs the same number of times,
+regardless of order.
+(TODO explain better)
+Or:
+
+	f[xy] = f[yx]
+
+We can see this in practice with the earlier example:
+
+	f = xxxyy + xxy
+
+	f[xx] = 6xyy + 2y
+	f[xxy] = 12xy + 2
+
+	f[y] = 2xxxy + xx
+	f[yx] = 6xxy + 2x
+	f[yxx] = 12xy + 2 = f[xxy]
+
+... and so forth.
 
 
 Directional Derivatives

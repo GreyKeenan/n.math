@@ -64,7 +64,7 @@ The divergence of a vector field `F` is given by:
 
 	F = < P, Q, R >
 	divergence(F) = NABLA*F = A*F
-	A*F = aP/ax + aQ/ay + aR/az
+	A*F = aP/ax + aQ/ay + aR/az + ...
 
 TODO: explain
 TODO: conceptually / incompressibility

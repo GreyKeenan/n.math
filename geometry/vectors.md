@@ -475,8 +475,8 @@ Or, parametrically:
 
 Here are some other examples:
 
-	v(t,z) = < 3cost, 3sint, z >             a cylinder-shell w/ radius 3
-	v(s,t) = <1,1,3> + s<6,0,1> + t<1,1,0>   an plane through (1,1,3)
+	v(t,z) = < 3cost, 3sint, z >           a cylinder-shell w/ radius 3
+	v(s,t) = <1,1,3> + s<6,0,1> + t<1,1,0> an angled plane through (1,1,3)
 	v(r,t,z) = <rcost, rsint, z>, r:in:[0,7] a cylinder-volume w/ radius 7
 	v(t) = <t, cost, sint>             a spiral extending along the x axis
 
