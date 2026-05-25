@@ -17,6 +17,7 @@ Prerequisites
 
 TODO: order to approach these documents in
 
+1. [multivariable limits](multivariable-limits) (optional)
 1. [partial derivatives](partial-derivatives)
 1. [integrals in higher dimensions](integrals-in-higher-dimensions)
 1. [derivatives of vectors](derivatives-of-vectors)
@@ -24,5 +25,4 @@ TODO: order to approach these documents in
   (optional, but useful for line integrals)
 1. [integrals with vectors](integrals-with-vectors)
 1. [Green's, Stokes's, and The Divergence Theorems](green-stokes-divergence-theorems)
-
 
