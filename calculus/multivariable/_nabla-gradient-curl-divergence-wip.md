@@ -23,7 +23,7 @@ The Nabla Operator
 
 The "nabla" symbol is an upside-down triangle,
 or more specifically, an upside-down capital delta.
-(For our purposes, `A` will be used as the nabla symbol.)
+(For our purposes, `A` will be used as the nabla symbol in this document.)
 The NABLA operator is used to notate gradient, curl, and divergence.
 But first, let's get a sense of what the operator is.
 
@@ -56,6 +56,8 @@ So, the gradient of a scalar function
 will itself be a vector function,
 and we cannot take the gradient of a vector function.
 
+TODO: conceptually
+
 
 Divergence
 ========================================
@@ -64,7 +66,7 @@ The divergence of a vector field `F` is given by:
 
 	F = < P, Q, R >
 	divergence(F) = NABLA*F = A*F
-	A*F = aP/ax + aQ/ay + aR/az + ...
+	A*F = aP/ax + aQ/ay + aR/az ... and so forth
 
 TODO: explain
 TODO: conceptually / incompressibility
