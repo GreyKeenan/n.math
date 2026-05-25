@@ -17,7 +17,7 @@ and can be used loosely & flexibly just like real math notation.
 It's not a programming language. Context is king.
 
 Greek symbols are typically identified by their name
-with capitalization indicated,
+with capitalization indicated by the case of the letters,
 e.g. `lambda`, `SIGMA`, `pi`, or `theta`.
 
 Functions, likewise, are called by name.
@@ -32,18 +32,18 @@ Superscript and subscript:
 	x^(superscript)
 	x^[superscript]
 	x{superscript}   <- on occasion
-	x^s
+	x^s   <- for single numbers/variables
 	x^1234
 	x^-1234
 
 	x[subscript]
 	x_(subscript)
 	x_[subscript]
-	x_s   <- for single characters
+	x_s   <- for single numbers/variables
 	x_1234
 	x_-1234
 
-	x123 <- may indicate subscript rather than multiplication
+	x123 <- numbers after a var often is subscript rather than mult
 
 `{R}` or `{RR}` could be used to indicate the set of real numbers, etc.
 
@@ -56,7 +56,8 @@ Superscript and subscript:
 	>= greater or equal
 	<= less or equal /or/ reverse of `=>` symbol
 
-Multiline things are often denoted with big parentheses:
+Multiline things are often denoted with big parentheses
+(and not necessarily closed):
 
 	/   like a
 	:  --------------
@@ -72,6 +73,8 @@ Multiline things are often denoted with big parentheses:
 
 ### Specific conventions
 
+Beyond those things, here are a few specific symbols or names that I used often:
+
 `root(x) = x^[1/2]`.
 `root[n](x) = x^[1/n]`.
 `sqrt` and `sqrt[n]` may be used as well.
@@ -82,7 +85,7 @@ Multiline things are often denoted with big parentheses:
 
 `S` is often used in place of `INT` aka the long-S integral symbol. \
 `Z` is often used in place of `SUM` aka `SIGMA`. \
-`TT` is often used in place of `PRODUCT` aka `PI`. \
-`a` is sometimes used for `partial`. \
-`N` is sometimes used for `NABLA`.
-
+`TT` is often used in place of `PRODUCT` aka capital-`PI`. \
+`D` is often used as shorthand for capital-`DELTA`. \
+`a` is sometimes used for the `partial` symbol with partial-derivatives. \
+`NABLA` is preferred over the name "del".

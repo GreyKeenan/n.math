@@ -1,6 +1,10 @@
 Grey's Math Notes: Index
 ========================================
 
+I use a bit of an unusual, ascii-compatible math-symbol notation-convention in these notes.
+I explain it a little here: [symbology.md](symbology).
+
+
 ### Cheatsheets
 
 Lists of common formulas or relationships.
