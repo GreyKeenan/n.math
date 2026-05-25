@@ -5,6 +5,7 @@ Partial Derivatives
 
 <!-- INDEX -->
 * Derivatives of Multivariable Functions
+  * The Limit-Definition of a Partial Derivative
 * Notation
 * Higher-Order Partials and Clairaut's Theorem
 * Relating Differentials and Partials
@@ -22,8 +23,6 @@ Prerequisites
 * multivariable functions
 * vectors
 * regular, single-variable derivatives
-
-> TODO: limit definition of partial
 
 
 Derivatives of Multivariable Functions
@@ -94,6 +93,34 @@ this same concept applies in higher dimensional spaces.
 For instance, a function of three variables `h(x,y,z)`
 would have three partial derivatives: `h_x`, `h_y`, and `h_z`.
 (Just as a vector in higher dimensions has added components.)
+
+
+The Limit-Definition of a Partial Derivative
+----------------------------------------
+
+Just as we used a limit to define regular derivatives,
+we can do the same thing for partial derivatives.
+
+The partial derivative of `f(x,y)` with respect to x is:
+
+	          /    f(x + h, y) - f(x, y)
+	lim[h->0] :  -------------------------
+	          \            h
+
+	or
+
+	          /    f(x, y) - f(a, y)
+	lim[x->a] :  ---------------------
+	          \          x - a
+
+Of course, then, with respect to y:
+
+	          /    f(x, y + h) - f(x, y)
+	lim[h->0] :  -------------------------
+	          \            h
+
+... and so forth.
+
 
 
 Notation
@@ -229,12 +256,6 @@ Implicit Partial-Differentiation
 Directional Derivatives
 ========================================
 
-TODO
-
-	D[v]
-	f'_v
-	vhat*NABLAf
-
 So, we've seen that partial derivatives are just derivatives/slopes
 in the direction of some particular axis.
 In theory, though, there should exist
@@ -279,5 +300,7 @@ it is more useful to refer to it as NABLA, in my opinion.
 Derivatives Along a Vector
 ----------------------------------------
 
-TODO: dot product with unit vector
+> TODO: dot product with unit vector
+
+> TODO: notation
 
