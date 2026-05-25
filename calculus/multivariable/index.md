@@ -26,3 +26,4 @@ TODO: order to approach these documents in
 1. [integrals with vectors](integrals-with-vectors)
 1. [Green's, Stokes's, and The Divergence Theorems](green-stokes-divergence-theorems)
 
+> TODO: applications: approximation, lagrange multipliers, extremes
