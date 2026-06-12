@@ -20,6 +20,7 @@ For reference only; explanations excluded.
 
 ### Major Categories
 
+* [algebra](algebra/index)
 * [geometry](geometry/index)
 * [statistics](statistics/index)
 * [trigonometry](trigonometry/index)
