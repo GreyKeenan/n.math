@@ -20,3 +20,6 @@ TODO
 * converting to polar coordinates
 * higher-D
 * dont really know generalized approach, if exists
+* iterated limits
+* using squeeze thm and such
+
