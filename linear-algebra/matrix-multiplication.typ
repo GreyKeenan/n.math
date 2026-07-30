@@ -51,7 +51,7 @@ $
 	mat(1,0,0,0;0,1,0,0;0,0,1,0;0,0,0,1), ...
 $
 
-The #term[identity matrix] is a matrix with
+The #term[identity matrix] is a square matrix with
 1s along its diagonal and the rest zero, as shown above.
 It is usually denoted with $II$,
 or sometimes $II_n$ where it is an $n times n$ matrix.

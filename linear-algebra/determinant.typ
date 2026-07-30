@@ -8,14 +8,12 @@
 $
 	LET AA "be any" #underline($"square"$) "matrix"
 	\
-	"determinant of" AA = det(AA) = |AA| = matd(a,b,...;c,d;...)
+	"determinant of" AA = det(AA) = |AA| = matd(a,b,c;d,e,f;g,h,i)
 $
 
-The #term[determinant] of a matrix is like the its "magnitude",
-borrowing the concept from vectors.
-It's a little harder to visualize, though,
-since matrices are multidimensional compared to a vector's 1d shape.
-Consider, though:
+The #term[determinant] is to a matrix as the magnitude is to a vector.
+It is a scalar which represents, in some sense, the "size" of the matrix.
+Consider:
 
 $
 	|C AA| = C|AA|
@@ -23,9 +21,23 @@ $
 	|AA BB| = |AA| |BB|
 $
 
-Note, also, that only square matrices have determinants.
+Where the magnitude of a vector is its length, or its 1d size,
+the determinant of an $n by n$ matrix is the $n$d hypervolume
+whose boundaries are described by the matrix's row or column vectors.
+Good luck visualizing that.
 
-Unfortunately, computing determinants is harder than vector-magnitudes.
+Consider, consequently, why the matrix must be square.
+In order to have enough dimensionality
+for each row/column to create boundaries for an $n$d space,
+they must have $n$ components.
+
+The major difference, though,
+is that the determinant may be positive or negative.
+(#TODO meaning of that)
+
+#TODO other implications, collinearity
+
+Unfortunately, computing determinants is harder than magnitudes.
 We define the process recursively.
 First, the "base cases" are the trivial determinants of
 $1 by 1$ and $2 by 2$ matrices:
@@ -123,4 +135,3 @@ it is advantageous to select that row/column which contains the most zeroes,
 since we know a zero's corresponding term will zero-out.
 
 
-== Implications of the Determinant #TODO

@@ -1,6 +1,12 @@
 #import "universal.typ":*
 
-
+#set page(
+	numbering:"(1)",
+	number-align: right+top,
+)
+#set text(
+	//size:9pt,
+)
 #set heading(numbering:"1.")
 
 #set math.mat(delim:"[")
@@ -47,28 +53,22 @@ It will be discussed separately as the "Inverse".
 
 = Unary Operations
 
-#set heading(offset:1)
-#include "determinant.typ"
+#hinc(H, 1, "determinant")
 
-#set heading(offset:1)
-#include "transpose.typ"
+#hinc(H, 1, "transpose")
 
-#set heading(offset:1)
-#include "adjugate.typ"
+#hinc(H, 1, "adjugate")
 
-#set heading(offset:0)
 == The Trace #TODO
 
-#set heading(offset:1)
-#include "inverse-matrices.typ"
+#hinc(H, 1, "inverse-matrices")
 
 
-#set heading(offset:0)
-#include "row-operations.typ"
+#hinc(H, 0, "row-operations")
 
 
-#set heading(offset:0)
-#include "eigenv.typ"
+#hinc(H, 0, "eigenv")
 
-#set heading(offset:0)
+= Diagonalization and Exponentiation #TODO
+
 = Laplace Tranaformations #TODO

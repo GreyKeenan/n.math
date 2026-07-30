@@ -9,19 +9,19 @@
 #let kh = $hat(k)$
 
 
-= An Introduction to Matrices
+= What's the Deal with Matrices?
 
 So, datastructures.
 By now, hopefully we're familiar with scalars and vectors.
-Scalars themselves have no dimension,
-and they can describe 1d values. The number line.
-Vectors themselves are one dimensional,
-and they can describe 2d+ values. Graphs.
+Scalars themselves are a 0d point,
+and they can describe 1d space. The number line.
+Vectors themselves are 1d lists of scalars,
+and they can describe 2d+ space. Graphs.
 
-But vectors are a datastructure which contains another datastructure.
-Its a storage type which stores scalars.
+But vectors are datastructures which contain other datastructures.
+It's a storage type which stores scalars.
 What would happen if we had a vector containing other vectors, though?
-(Strictly speaking, we can't do this with vectors.
+(Strictly speaking, we aren't allowed to do this.
 Imagine for a moment, though, that we could.)
 
 $
@@ -32,12 +32,11 @@ $
 	wV = [ vV, uV ] = [[a,b],[c,d]] approx mat(a,b;c,d) "or" mat(a,c;b,d)
 $
 
-Essentially, what we would have is a vector which is itself
-two-dimensional, regardless of the dimensionality of its data.
-Rather than a 2d vector, we have something like a 2 $by$ 2d vector.
+Essentially, what we would have is some 2d collection of scalars.
+An _area_ of scalars instead of a _line_.
+Rather than an $n$d vector, we have something like an $(m by n)"d"$ vector.
 
 Well, we don't call it a vector.
-Vectors contain scalars; not other vectors.
 Instead, we call it a matrix.
 
 A #term[matrix] is just another type of datastructure,
@@ -45,11 +44,14 @@ to borrow terminology from computer science.
 We can represent information using scalars,
 we can represent it using vectors,
 and we can represent it using matrices.
-Each of those tools have many associated applications and techniques.
+Consequently, each of those tools have
+many associated applications and techniques.
+Here, we're going to learn about the ones associated with matrices.
 
-(To extend the analogy further,
+(Aside: To extend the analogy further,
 we could also have matrices of matrices and so forth.
-But that's beyond the scope of this document here.)
+3d+ storage structures.
+But that's beyond the scope of this document.)
 
 ---
 
@@ -62,4 +64,8 @@ $
 	vV = a ih + b jh + c kh = mat(a;b;c) = mat(a,b,c)
 $
 
-#TODO where am I going with this
+#TODO col & row vectors
+
+#TODO describe 1d, describe 2d and beyond, describe what?
+Describe system of scalars, describe system of vectors.
+Cross product is a matrix thing.
