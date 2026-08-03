@@ -102,6 +102,8 @@
 
 #let drawGrid(view, steps:1, stroke:silver+0.5pt) = {
 	if type(steps) != array { steps = (steps, steps) }
+	if calc.rem(view.width, steps.at(0)) != 0 { panic("gridline distances do not fit given intervals") }
+	if calc.rem(view.height, steps.at(1)) != 0 { panic("gridline distances do not fit given intervals") }
 	if stroke != none {
 		let i = view.x0
 		while i <= view.x1 {

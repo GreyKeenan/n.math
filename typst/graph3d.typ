@@ -4,26 +4,97 @@
 
 #let labelize(view, t) = highlight(fill:white.transparentize(15%), radius:4pt, t)
 
+// computes width of the diagram if the height were 1, based on given intervals
+#let _computeSize(tamp, intervals, gridspace) = {
+
+	let ends = ()
+	let p = (0,0)
+	if (gridspace) {
+		let x0y0 = tamp( (intervals.at(0).at(0), intervals.at(1).at(0), 0) )
+		let p = x0y0
+		let x1y1 = tamp( (intervals.at(0).at(1), intervals.at(1).at(1), 0) )
+		let x0y1 = tamp( (intervals.at(0).at(0), intervals.at(1).at(1), 0) )
+		let x1y0 = tamp( (intervals.at(0).at(1), intervals.at(1).at(0), 0) )
+
+		let x0z0 = tamp( (intervals.at(0).at(0), 0, intervals.at(2).at(0)) )
+		let x1z1 = tamp( (intervals.at(0).at(1), 0, intervals.at(2).at(1)) )
+		let x1z0 = tamp( (intervals.at(0).at(1), 0, intervals.at(2).at(0)) )
+		let x0z1 = tamp( (intervals.at(0).at(0), 0, intervals.at(2).at(1)) )
+
+		let y0z0 = tamp( (0, intervals.at(1).at(0), intervals.at(2).at(0)) )
+		let y1z1 = tamp( (0, intervals.at(1).at(1), intervals.at(2).at(1)) )
+		let y1z0 = tamp( (0, intervals.at(1).at(1), intervals.at(2).at(0)) )
+		let y0z1 = tamp( (0, intervals.at(1).at(0), intervals.at(2).at(1)) )
+
+		ends = (x0y0, x1y1, x0y1, x1y0, x0z0, x1z1, x1z0, x0z1, y0z0, y1z1, y1z0, y0z1)
+	} else {
+		let x0 = tamp( (intervals.at(0).at(0), 0, 0) )
+		p = x0
+		let x1 = tamp( (intervals.at(0).at(1), 0, 0) )
+		let y0 = tamp( (0, intervals.at(1).at(0), 0) )
+		let y1 = tamp( (0, intervals.at(1).at(1), 0) )
+		let z0 = tamp( (0, 0, intervals.at(2).at(0)) )
+		let z1 = tamp( (0, 0, intervals.at(2).at(1)) )
+		ends = ( x0, x1, y0, y1, z0, z1 )
+	}
+
+	let lowestX = p
+	for i in ends {
+		if i.at(0) < lowestX.at(0) {
+			lowestX = i
+		}
+	}
+	let greatestX = p
+	for i in ends {
+		if i.at(0) > greatestX.at(0) {
+			greatestX = i
+		}
+	}
+	let lowestY = p
+	for i in ends {
+		if i.at(1) < lowestY.at(1) {
+			lowestY = i
+		}
+	}
+	let greatestY = p
+	for i in ends {
+		if i.at(1) > greatestY.at(1) {
+			greatestY = i
+		}
+	}
+
+	let width = greatestX.at(0) - lowestX.at(0)
+	let height = greatestY.at(1) - lowestY.at(1)
+
+	return (w:width, h:height)
+}
+
 #let view(
-	//frame:(100%, 100%),
+	frame:(100% - 1em),
 	normal:(-3,-2,-1),
 	up:vec.k,
-	scale2d:9%,
+	makeSpaceForGrid:false,
 	scale3d:1,
 	origin:(50%,50%),
 	intervals:(-d, d),
 	label:labelize,
 ) = {
+	if type(frame) != array { frame = (frame, frame) }
 	if type(normal) != array { normal = (normal, normal, normal) }
-	if type(scale2d) != array { scale2d = (scale2d, scale2d) }
+	//if type(scale2d) != array { scale2d = (scale2d, scale2d) }
 	if type(scale3d) != array { scale3d = (scale3d, scale3d, scale3d) }
+	if type(intervals) != array { intervals = (-intervals, intervals) }
 	if type(intervals.at(0)) != array { intervals = (intervals, intervals, intervals) }
+
+	if intervals.at(0).at(1) <= intervals.at(0).at(0) { panic("invalid intervals given.") }
+	if intervals.at(1).at(1) <= intervals.at(1).at(0) { panic("invalid intervals given.") }
+	if intervals.at(2).at(1) <= intervals.at(2).at(0) { panic("invalid intervals given.") }
 
 	up = vec.normalize(up)
 	let n = vec.normalize(normal)
 	let i = vec.cross( n, up )
 	let j = vec.cross( n, i )
-	let stamp(v) = {
+	let tamp(v) = {
 		v = vec.multiply(v, scale3d)
 		let s = vec.dot(v, n)
 		let r = (
@@ -31,16 +102,37 @@
 			v.at(1, default:0) - s*n.at(1, default:0),
 			v.at(2, default:0) - s*n.at(2, default:0),
 		)
+		return (vec.dot(r, i), vec.dot(r, j))
+	}
+
+	// automatically adjust scale to fit in container
+	let size = _computeSize(tamp, intervals, makeSpaceForGrid)
+	let scale2d = ()
+	if (size.w/size.h <= 1) {
+		scale2d = (
+			size.w/size.h * frame.at(0),
+			frame.at(1),
+		)
+		scale2d = vec.scale(scale2d, 1/size.h)
+	} else {
+		scale2d = (
+			frame.at(0),
+			size.h / size.w * frame.at(1),
+		)
+		scale2d = vec.scale(scale2d, 1/size.w)
+	}
+	let stamp(v) = {
+		let r = tamp(v)
 		return (
-			origin.at(0) + vec.dot(r, i) * scale2d.at(0),
-			origin.at(1) + vec.dot(r, j) * scale2d.at(0)
+			origin.at(0) + r.at(0) * scale2d.at(0),
+			origin.at(1) + r.at(1) * scale2d.at(1),
 		)
 	}
-	
+
 	return (
-		normal:normal,
-		up:up,
-		scale2d:scale2d,
+		//normal:normal,
+		//up:up,
+		//scale2d:scale2d,
 
 		x:intervals.at(0),
 		x0:intervals.at(0).at(0),
@@ -143,8 +235,12 @@
 	yz:none,
 	xz:none,
 	stroke:silver+0.5pt,
-	step:1,
+	steps:1,
 ) = {
+	if type(steps) != array { steps = (steps, steps, steps) }
+	if calc.rem(view.x1 - view.x0, steps.at(0)) != 0 { panic("gridline distances do not fit given intervals") }
+	if calc.rem(view.y1 - view.y0, steps.at(1)) != 0 { panic("gridline distances do not fit given intervals") }
+	if calc.rem(view.z1 - view.z0, steps.at(2)) != 0 { panic("gridline distances do not fit given intervals") }
 	if xy == auto {
 		xy = (
 			(view.x0, view.x1),
@@ -172,7 +268,7 @@
 					(i, xy.at(1).at(1), 0),
 					stroke:stroke,
 				)
-				i += step
+				i += steps.at(0)
 			}
 			i = view.y0
 			while i <= view.y1 {
@@ -181,7 +277,7 @@
 					(xy.at(0).at(1), i, 0),
 					stroke:stroke,
 				)
-				i += step
+				i += steps.at(1)
 			}
 		}
 		if yz != none {
@@ -192,7 +288,7 @@
 					(0, yz.at(0).at(1), i),
 					stroke:stroke,
 				)
-				i += step
+				i += steps.at(1)
 			}
 			i = view.y0
 			while i <= view.y1 {
@@ -201,7 +297,7 @@
 					(0, i, yz.at(1).at(1)),
 					stroke:stroke,
 				)
-				i += step
+				i += steps.at(2)
 			}
 		}
 		if xz != none {
@@ -212,7 +308,7 @@
 					(i, 0, xz.at(1).at(1)),
 					stroke:stroke,
 				)
-				i += step
+				i += steps.at(0)
 			}
 			i = view.z0
 			while i <= view.z1 {
@@ -221,7 +317,7 @@
 					(xz.at(0).at(1), 0, i),
 					stroke:stroke,
 				)
-				i += step
+				i += steps.at(2)
 			}
 		}
 	}

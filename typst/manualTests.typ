@@ -4,11 +4,9 @@
 #import "graph3d.typ" as gr3
 
 
-#square(width:200pt)[
+#block(width:200pt, height:100pt)[
 
 	#let view = gr2.view(
-		frame:(100%, 50%),
-		offset:(0%, 25%),
 		x:(-10, 10),
 		y:(-5, 5),
 	)
@@ -24,24 +22,30 @@
 
 ]
 
-#square(width:200pt)[
+#box(width:200pt, height:200pt)[
 
-	#let view = gr3.view()
+	#let b = 30
+
+	#let view = gr3.view(
+		//normal:-1,
+		intervals:( (-b,b), (-b,b), (0, b) ),
+		//intervals:b,
+		//makeSpaceForGrid:true
+	)
+	//#gr3.drawGrid(view)
 	#gr3.drawAxes(view)
 
 	#let r(t) = (
 		t*calc.cos(t),
 		t*calc.sin(t),
-		t/5,
+		t,
 	)
-	#gr3.drawCurve(view, r, interval:(-5, 7), steps:90, skip:0.1)
+	#gr3.drawCurve(view, r, interval:(-0/1.5, b/1.5), steps:200)
 
 	//#let R(s, t) = vec.add( r(t), (s, 0, 0) )
 	//#gr3.drawSurface(view, R, intervals:((0,2), (-5,7)), steps:40)
-
 	//#gr3.polygon(view, ((0,0), (1,0), (3,2), (0,1)), stroke:red)
-
-	#gr3.plot(view, r(6), label:auto)
+	//#gr3.plot(view, r(6), label:auto)
  
 	#gr3.drawAxisLabels(view)
 
