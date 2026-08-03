@@ -2,13 +2,17 @@
 
 #let d = 5
 
-#let labelhighlight(t) = highlight(fill:white.transparentize(15%), radius:4pt, t)
+#let labelize(view, t) = highlight(fill:white.transparentize(15%), radius:4pt, t)
 
 #let view(
 	//frame:(100%, 100%),
-	normal:-1, up:vec.k, scale2d:1%, scale3d:1,
+	normal:(-3,-2,-1),
+	up:vec.k,
+	scale2d:9%,
+	scale3d:1,
 	origin:(50%,50%),
 	intervals:(-d, d),
+	label:labelize,
 ) = {
 	if type(normal) != array { normal = (normal, normal, normal) }
 	if type(scale2d) != array { scale2d = (scale2d, scale2d) }
@@ -48,7 +52,9 @@
 		z0:intervals.at(2).at(0),
 		z1:intervals.at(2).at(1),
 
-		stamp:stamp
+		label:label,
+
+		stamp:stamp,
 	)
 }
 
@@ -74,12 +80,11 @@
 	let pos2d = (view.stamp)(pos)
 	if label == auto {
 		label = "(" + str(calc.round(pos.at(0), digits:digits)) + ", " + str(calc.round(pos.at(1), digits:digits)) + ", " + str(calc.round(pos.at(2), digits:digits)) + ")"
-		label = labelhighlight(text(fill:fill, label))
 	}
 	place(
 		dx: pos2d.at(0) + offset.at(0),
 		dy: pos2d.at(1) + offset.at(1),
-		label,
+		(view.label)(view, label),
 	)
 	place(
 		dx: pos2d.at(0) - radius,
@@ -92,14 +97,53 @@
 	)
 }
 
+#let drawAxes(view, stroke:gray) = {
+	connect(view, (view.x0, 0, 0), (view.x1, 0, 0), stroke:stroke)
+	connect(view, (0, view.y0, 0), (0, view.y1, 0), stroke:stroke)
+	connect(view, (0, 0, view.z0), (0, 0, view.z1), stroke:stroke)
+}
+
+#let drawAxisLabels(
+	view,
+	labels:(
+		[x],
+		[y],
+		[z],
+	),
+	labelDistances:0,
+	labelOffsets:(-0.25em, -0.5em),
+) = {
+	if type(labelDistances) != array { labelDistances = (labelDistances, labelDistances, labelDistances) }
+	if type(labelOffsets.at(0)) != array { labelOffsets = (labelOffsets, labelOffsets, labelOffsets) }
+	let i = (view.x1 + labelDistances.at(0), 0, 0)
+	let j = (0, view.y1 + labelDistances.at(1), 0)
+	let k = (0, 0, view.z1 + labelDistances.at(2))
+	i = (view.stamp)(i)
+	j = (view.stamp)(j)
+	k = (view.stamp)(k)
+	place(
+		dx:i.at(0) + labelOffsets.at(0).at(0),
+		dy:i.at(1) + labelOffsets.at(0).at(1),
+		(view.label)(view, labels.at(0)),
+	)
+	place(
+		dx:j.at(0) + labelOffsets.at(1).at(0),
+		dy:j.at(1) + labelOffsets.at(1).at(1),
+		(view.label)(view, labels.at(1)),
+	)
+	place(
+		dx:k.at(0) + labelOffsets.at(2).at(0),
+		dy:k.at(1) + labelOffsets.at(2).at(1),
+		(view.label)(view, labels.at(2)),
+	)
+}
 
 #let drawGrid(view,
 	xy:auto,
 	yz:none,
 	xz:none,
-	gridlines:silver+0.5pt,
+	stroke:silver+0.5pt,
 	step:1,
-	axes:gray,
 ) = {
 	if xy == auto {
 		xy = (
@@ -119,14 +163,14 @@
 			(view.z0, view.z1),
 		)
 	}
-	if gridlines != none {
+	if stroke != none {
 		if (xy != none) {
 			let i = view.x0
 			while i <= view.x1 {
 				connect(view,
 					(i, xy.at(1).at(0), 0),
 					(i, xy.at(1).at(1), 0),
-					stroke:gridlines,
+					stroke:stroke,
 				)
 				i += step
 			}
@@ -135,7 +179,7 @@
 				connect(view,
 					(xy.at(0).at(0), i, 0),
 					(xy.at(0).at(1), i, 0),
-					stroke:gridlines,
+					stroke:stroke,
 				)
 				i += step
 			}
@@ -146,7 +190,7 @@
 				connect(view,
 					(0, yz.at(0).at(0), i),
 					(0, yz.at(0).at(1), i),
-					stroke:gridlines,
+					stroke:stroke,
 				)
 				i += step
 			}
@@ -155,7 +199,7 @@
 				connect(view,
 					(0, i, yz.at(1).at(0)),
 					(0, i, yz.at(1).at(1)),
-					stroke:gridlines,
+					stroke:stroke,
 				)
 				i += step
 			}
@@ -166,7 +210,7 @@
 				connect(view,
 					(i, 0, xz.at(1).at(0)),
 					(i, 0, xz.at(1).at(1)),
-					stroke:gridlines,
+					stroke:stroke,
 				)
 				i += step
 			}
@@ -175,51 +219,15 @@
 				connect(view,
 					(xz.at(0).at(0), 0, i),
 					(xz.at(0).at(1), 0, i),
-					stroke:gridlines,
+					stroke:stroke,
 				)
 				i += step
 			}
 		}
 	}
-	connect(view, (view.x0, 0, 0), (view.x1, 0, 0), stroke:axes)
-	connect(view, (0, view.y0, 0), (0, view.y1, 0), stroke:axes)
-	connect(view, (0, 0, view.z0), (0, 0, view.z1), stroke:axes)
 }
 
-#let drawAxisLabels(
-	view,
-	labels:(
-		labelhighlight[x],
-		labelhighlight[y],
-		labelhighlight[z],
-	),
-	labelDistances:0,
-	labelOffsets:(-0.25em, -0.5em),
-) = {
-	if type(labelDistances) != array { labelDistances = (labelDistances, labelDistances, labelDistances) }
-	if type(labelOffsets.at(0)) != array { labelOffsets = (labelOffsets, labelOffsets, labelOffsets) }
-	let i = (view.x1 + labelDistances.at(0), 0, 0)
-	let j = (0, view.y1 + labelDistances.at(1), 0)
-	let k = (0, 0, view.z1 + labelDistances.at(2))
-	i = (view.stamp)(i)
-	j = (view.stamp)(j)
-	k = (view.stamp)(k)
-	place(
-		dx:i.at(0) + labelOffsets.at(0).at(0),
-		dy:i.at(1) + labelOffsets.at(0).at(1),
-		labels.at(0),
-	)
-	place(
-		dx:j.at(0) + labelOffsets.at(1).at(0),
-		dy:j.at(1) + labelOffsets.at(1).at(1),
-		labels.at(1),
-	)
-	place(
-		dx:k.at(0) + labelOffsets.at(2).at(0),
-		dy:k.at(1) + labelOffsets.at(2).at(1),
-		labels.at(2),
-	)
-}
+#let drawTicks(view, step:1, stroke:gray) = { } // TODO
 
 #let drawCurve(
 	view, r, // r is a vector function of 1 variable

@@ -1,10 +1,13 @@
 #import "vector.typ" as vec
 
+#let labelize(view, t) = highlight(fill:white.transparentize(15%), radius:4pt, t)
+
 #let view(
 	frame:(100%, 100%),
 	offset:(0pt, 0pt),
 	x:(-5, 5),
 	y:auto,
+	label:labelize
 ) = {
 
 	if y == auto { y = (x.at(0), x.at(1)) }
@@ -32,6 +35,8 @@
 		y1:origin.y + calc.abs(y.at(0)) * scale.y,
 	)
 
+	let stamp(p) = ( origin.x + p.at(0) * scale.x, origin.y + p.at(1) * scale.y )
+
 	return (
 		frame:frame,
 		x:x,
@@ -45,20 +50,16 @@
 		height:height,
 		origin:origin,
 		scale:scale,
+
+		stamp:stamp,
+		label:label,
 	)
 }
 
-
 #let connect(view, p1, p2, stroke:black) = {
 	place(line(
-		start:(
-			view.origin.x + p1.at(0) * view.scale.x,
-			view.origin.y + p1.at(1) * view.scale.y,
-		),
-		end:(
-			view.origin.x + p2.at(0) * view.scale.x,
-			view.origin.y + p2.at(1) * view.scale.y,
-		),
+		start:(view.stamp)(p1),
+		end:(view.stamp)(p2),
 		stroke:stroke,
 	))
 }
@@ -73,17 +74,41 @@
 	//TODO: vertices
 }
 
-#let plot() = {} // TODO
+#let plot(view, pos, label:none, offset:(0em, -1em), fill:black, radius:2pt, stroke:none, digits:2) = {
+	if label == auto {
+		label = "(" + str(calc.round(pos.at(0), digits:digits)) + ", " + str(calc.round(pos.at(1), digits:digits)) + ")"
+	}
+	pos = (view.stamp)(pos)
+	place(
+		dx: pos.at(0) + offset.at(0),
+		dy: pos.at(1) + offset.at(1),
+		(view.label)(view, label),
+	)
+	place(
+		dx: pos.at(0) - radius,
+		dy: pos.at(1) - radius,
+		circle(
+			radius:radius,
+			fill:fill,
+			stroke:stroke,
+		)
+	)
+}
 
-#let drawGrid(view, steps:1, axes:gray, gridlines:silver+0.5pt) = {
+#let drawAxes(view, stroke:gray) = {
+	connect(view, (view.x0, 0), (view.x1, 0), stroke:stroke)
+	connect(view, (0, view.y0), (0, view.y1), stroke:stroke)
+}
+
+#let drawGrid(view, steps:1, stroke:silver+0.5pt) = {
 	if type(steps) != array { steps = (steps, steps) }
-	if gridlines != none {
+	if stroke != none {
 		let i = view.x0
 		while i <= view.x1 {
 			connect(view,
 				(i, view.y0),
 				(i, view.y1),
-				stroke:gridlines,
+				stroke:stroke,
 			)
 			i += steps.at(0)
 		}
@@ -91,13 +116,11 @@
 		while j <= view.y1 {
 			connect(view,
 				(view.x0, j), (view.x1, j),
-				stroke:gridlines,
+				stroke:stroke,
 			)
 			j += steps.at(1)
 		}
 	}
-	connect(view, (view.x0, 0), (view.x1, 0), stroke:axes)
-	connect(view, (0, view.y0), (0, view.y1), stroke:axes)
 }
 
 #let drawCurve(view, f, interval:auto, steps:auto, skip:0, stroke:black) = {
