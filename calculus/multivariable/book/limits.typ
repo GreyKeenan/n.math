@@ -3,34 +3,50 @@
 
 = Multivariable Limits
 
-Just as we are introduced to single-variable calculus by beginning with limits,
-it is useful to see multivariable calculus first through the lens of multivariable limits.
-We won't end up _directly_ needing most of this later,
-but an intuitive understanding of this behavior will help us understand the differences
-between multivariable and single-variable infinitessimals.
+Just as limits help us understand derivatives and infinitessimals in singlevariable calculus,
+it is useful to begin with multivariable limits here as ewll.
+Understanding the differences between multivariable and singlevariable limits
+will help build an intuition for
+the differences between multivariable and signlevariable calculus as a whole.
 
-First, let's ask what it means to take the limit of some function $f(x,y)$.
-Well, recall that the limit of $g(x)$ as $x$ goes to $a$
-is the value that $g$ approaches as the distance between $x$ and $a$ decreases.
-Similarly, the limit of $f(x,y)$ as $(x,y)$ goes to $(a,b)$
-is the value that $f$ approaches as the distance between $(x,y)$ and $(a,b)$ decreases.
+== The Concept of Multivariable Limits
 
-#TODO visuals
+The limit of $g(x)$ as $x -> a$ is the value that $g$ approaches
+as the distance between $x$ and $a$ decreases
+on the domain of $g$, a 1d number line.
 
-This makes multivariable limits seem very similar to single-variable ones,
-and they are, but there's a catch.
-With a 1d limit, or the limit of a single-variable function,
-$x$ can only approach $a$ in two ways: from above or from below.
-With a 2d or higher limit, $(x,y)$ can approach
-the point $(a,b)$ from infinite different directions
-or along any possible path through a 2d plane.
-Now, recall that with 1d limits, both approaches (above and below)
-must agree in order for the limit to exist.
-Similarly, with multivariable limits,
-*every approach must agree in order for the limit to exist.*
-As you might imagine, this makes it more difficult to prove that limits exist.
+Similarly, the limit of $f(x,y)$ as $(x,y) -> (a,b)$
+is the value that $f$ approaches
+as the distance between the points $(x,y)$ and $(a,b)$ decreases
+on the domain of $f$, a 2d plane.
+And so forth for higher dimensions.
 
-#TODO techniques for solving, factoring out, a var, grouping and substituting, parametrics,
+#TODO visual
+
+This leads to some #terminology.
+A function of two variables $f(x,y)$ is graphed in 3d space as $(x, y, f(x,y))$.
+Its limit, however, is referred to as "2 dimensional" because the limit operates over $f$'s domain, $(x,y)$.
+It follows, then, that a function of 1 variable has a 1d limit, or that a function of $n$ variables has a $n$d limit.
+
+Now, with 1d limits, recall the concept of one-sided limits.
+Because we are on a 1d line, $x$ can only approach $a$ from either the left or the right.
+A "true" limit, then, only exists if both the left and right limits agree.
+We will now generalize this concept to higher dimensions.
+
+#let xy = $(x,y)$
+#let ab = $(a,b)$
+
+Let us consider the limit of $f(x,y) "as" (x,y) -> (a,b)$.
+The points #xy and #ab are on a 2d plane, and so #xy can theoretially approach #ab
+from infinite, straight-line directions,
+as well as along any curved path which passes through #ab.
+
+#TODO visual
+
+In order to prove that a limit to exist,
+we must show that _all paths_ agree.
+With 1d limits, this was trivial since there were only 2 approaches, the left and right.
+With 2d+ limits, we must show that this is true for all of the infinite possible paths.
+
+#TODO notation, techniques for solving, factoring out a var, grouping and substituting, parametrics,
 higher-dimensions, a generalized approach?, iterated limits, squeeze theorem techniques
-
-

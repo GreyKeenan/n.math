@@ -6,40 +6,30 @@
 )
 #set page(
 	numbering:"(1)",
-	number-align: right+top,
+	number-align: right+bottom,
 )
 #set text(
-	//size:9pt,
+	//size:7pt,
 )
 #set heading(numbering:"1.")
 
 #set math.mat(delim:"[")
 
-#let hinc(H, h, f) = {
-	set heading(offset:H + h)
-	include f + ".typ"
-	set heading(offset:H)
-}
-#let H = 0
-
 #title()
 
-By now, we should be familiar with derivatives and integrals of single-variable functions.
-...
-
-Further, I'm going to assume that we're on board with the idea of 3d+ spaces, functions, etc.
-These are notes for doing calculus in more than two dimensions,
-not notes about how higher-dimensional spaces work to begin with.
-So, we should already know how parametric equations and vectors are a useful tool
-when working in higher dimensions.
+By now, you're familiar with calculus involving functions of a single variable.
+In reality, though, many applications involve functions of multiple variables, $f(x,y,z)$.
+What does it mean to do limits, derivatives, and integrals involving such functions?
 
 #outline()
 
 // TODO gaussian integral, extra integration techniques?
 
-#hinc(H, 0, "limits")
+#hinc("higher-dimensions")
 
-#hinc(H, 0, "partial-derivatives")
+#hinc("limits")
+
+#hinc("multivariable-derivatives")
 
 = Application: Approximation Using Partial Derivatives
 
