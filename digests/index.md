@@ -1,5 +1,5 @@
-Math Cheatsheets
-================
+Math Digests
+============
 
 * [trigonometry](trigonometry.pdf)
 

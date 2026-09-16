@@ -1,4 +1,5 @@
 
 > Grey's math notes
 
-* [cheatsheets](cheatsheets/)
+* [Digests (reference sheets)](digests//)
+* [Demonstrations](demonstrations/)
