@@ -48,8 +48,8 @@ $log_b (b^x) = b^(log_b (x)) = x \
 $
 
 $log_b (x^y) = y dot log_b (x) \
-log_b (x dot y) = log(x) + log(y) \
-log_b (x slash y) = log(x) - log(y) \
+log_b (x dot y) = log_b (x) + log_b (y) \
+log_b (x slash y) = log_b (x) - log_b (y) \
 $
 
 $( log_a (x) ) / ( log_a (b) ) = log_b (x) \
