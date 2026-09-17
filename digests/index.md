@@ -2,8 +2,9 @@ Math Digests
 ============
 
 * [exponentiation](exponentiation.pdf)
-* [limits](limits.pdf)
 * [trigonometry](trigonometry.pdf)
+* [limits](limits.pdf)
+* [differentiation](differentiation.pdf)
 
 
 
