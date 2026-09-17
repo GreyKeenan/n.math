@@ -68,4 +68,7 @@ $limi f(x) = plus.minus oo$ \
 
 *TODO*
 
+- indeterminate forms
+- towards 0/inf patterns
+- one-directional limits
 - higher-d limits

@@ -1,5 +1,5 @@
 
 > Grey's math notes
 
-* [Digests (reference sheets)](digests//)
+* [Digests (reference sheets)](digests/)
 * [Demonstrations](demonstrations/)
