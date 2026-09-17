@@ -5,8 +5,5 @@ Math Digests
 * [trigonometry](trigonometry.pdf)
 * [limits](limits.pdf)
 * [differentiation](differentiation.pdf)
-
-
-
-
+* [integration](integration.pdf)
 
